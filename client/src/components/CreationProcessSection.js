@@ -8,7 +8,7 @@ const CreationProcessSection = () => {
             title="Proces tworzenia"
             left={true} />
 
-        <main className="creationProcess">
+        <main className="creationProcess" data-aos="zoom-in-down">
             <p className="creationProcess__desc">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
             </p>

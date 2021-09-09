@@ -13,11 +13,11 @@ const TechnologiesSection = () => {
             left={false} />
 
         <main className="technologies">
-            <img className="absolute img--technologies1" src={img1} alt="technologie-tworzenia-witrazy" />
-            <img className="absolute img--technologies2" src={img2} alt="technologie-tworzenia-witrazy" />
-            <img className="absolute img--technologies3" src={img3} alt="technologie-tworzenia-witrazy" />
+            <img data-aos="fade-right" className="absolute img--technologies1" src={img1} alt="technologie-tworzenia-witrazy" />
+            <img data-aos="fade-left" className="absolute img--technologies2" src={img2} alt="technologie-tworzenia-witrazy" />
+            <img data-aos="fade-right" className="absolute img--technologies3" src={img3} alt="technologie-tworzenia-witrazy" />
 
-            <h3 className="aboutUs__header aboutUs__header--technologies">
+            <h3 data-aos="fade-down" className="aboutUs__header aboutUs__header--technologies">
                 Jakich technologii używamy do tworzenia witraży?
             </h3>
 

@@ -14,11 +14,11 @@ const ContactSection = () => {
             left={true} />
 
         <main className="contact">
-            <section className="contact__map">
+            <section className="contact__map" data-aos="fade-right" data-aos-delay="300">
                 <GoogleMap />
             </section>
 
-            <section className="contact__content">
+            <section className="contact__content" data-aos="fade-left" data-aos-delay="300">
                 <h4 className="contact__header">
                     Witraże Bednarscy
                 </h4>

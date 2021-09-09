@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './static/style/style.css'
 import './static/style/mobile.css'
 import Homepage from "./pages/Homepage";
+import AOS from 'aos'
+import "aos/dist/aos.css";
 
 function App() {
   /* Smooth scroll effect */
@@ -77,6 +79,13 @@ function App() {
 
   useEffect(() => {
       init();
+
+      console.log(AOS);
+
+      AOS.init({
+          duration: 1500,
+          delay: 200,
+      });
   }, []);
 
   return <Router>

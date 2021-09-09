@@ -12,10 +12,10 @@ const AboutUsSection = () => {
             left={true} />
 
         <main className="aboutUs">
-            <img className="absolute aboutUs__img--1" src={img1} alt="witraze-sakralne-bednarscy" />
-            <img className="absolute aboutUs__img--2" src={img2} alt="witraze-sakralne-bednarscy" />
+            <img data-aos="fade-right" className="absolute aboutUs__img--1" src={img1} alt="witraze-sakralne-bednarscy" />
+            <img data-aos="fade-left" className="absolute aboutUs__img--2" src={img2} alt="witraze-sakralne-bednarscy" />
 
-            <article className="aboutUs__content">
+            <article className="aboutUs__content" data-aos="zoom-in-down">
                 <h3 className="aboutUs__header">
                     Witraże Bednarscy
                 </h3>

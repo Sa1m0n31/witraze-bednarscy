@@ -2,7 +2,7 @@ import React from 'react'
 import Button from "./Button";
 
 const SingleTechnology = ({number, name, desc, extraClass, link}) => {
-    return <section className={`technology ${extraClass}`}>
+    return <section className={`technology ${extraClass}`} data-aos="zoom-in-down" data-aos-delay="400">
         <span className="technology__number">
             {number}
         </span>

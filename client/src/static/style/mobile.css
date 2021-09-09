@@ -1,0 +1,455 @@
+@media(max-width: 1800px) {
+    .aboutUs__content {
+        margin-left: clamp(50px, 25%, 340px);
+        max-width: 40%;
+    }
+
+    .aboutUs__header--technologies {
+        margin-left: 50%;
+    }
+
+    .technology--1 {
+        margin-left: 50%;
+    }
+}
+
+@media(max-width: 1600px) {
+    .aboutUs__content {
+        margin-left: 27%;
+    }
+
+    .aboutUs__text {
+        font-size: 15px;
+    }
+
+    .technology--2 {
+        margin-left: 10%;
+    }
+
+    .img--technologies3 {
+        transform: scale(.7);
+        transform-origin: top left;
+    }
+}
+
+@media(max-width: 1400px) {
+    .heroCarousel__header {
+        font-size: 48px;
+    }
+
+    .heroCarousel__subheader {
+        font-size: 21px;
+    }
+
+    .button--landing {
+        height: 70px;
+        width: 350px;
+        font-size: 24px;
+    }
+
+    .topMenu__link {
+        font-size: 13px;
+    }
+
+    .aboutUs__img--1, .aboutUs__img--2 {
+        transform: scale(.7);
+    }
+
+    .aboutUs__img--1 {
+        transform-origin: top left;
+    }
+
+    .aboutUs__img--2 {
+        transform-origin: top right;
+    }
+
+    .img--technologies1, .img--technologies2, .img--technologies3 {
+        transform: scale(.7);
+        transform-origin: top left;
+    }
+
+    .img--technologies2 {
+        transform-origin: top right;
+    }
+
+    .technology__name {
+        font-size: 32px;
+    }
+
+    .technology {
+        max-width: 400px;
+    }
+
+    .section--technologies {
+        margin-bottom: 100px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .topBar__logoLink__img {
+        width: 400px;
+    }
+
+    .topBar__shop {
+        font-size: 10px;
+    }
+
+    .contact__header {
+        font-size: 32px;
+    }
+
+    .contact__item__text {
+        font-size: 17px;
+    }
+
+    .contact__item__icon {
+        width: 20px;
+    }
+
+    .aboutUs__img--2 {
+        display: none;
+    }
+
+    .aboutUs__content {
+        max-width: 65%;
+    }
+
+    .section--technologies {
+        margin-top: 100px;
+    }
+
+    .img--technologies2 {
+        top: 600px;
+    }
+
+    .img--technologies3 {
+        left: 0;
+    }
+
+    .button--technology {
+        width: 250px;
+        height: 50px;
+        font-size: 17px;
+    }
+}
+
+@media(max-width: 996px) {
+    .d-desktop {
+        display: none;
+    }
+
+    .d-mobile {
+        display: block;
+    }
+
+    .topBar__language__inner--second {
+        right: unset;
+        left: 0;
+        bottom: -35px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__section {
+        margin-bottom: 30px;
+        width: 60%;
+    }
+
+    .footerHeader {
+        text-align: center;
+    }
+
+    .footerHeader::after {
+        display: none;
+    }
+
+    .footer__list__item {
+        text-align: center;
+    }
+
+    .footer__bottom {
+        margin-top: 0;
+    }
+
+    .heroCarousel__header, .heroCarousel__subheader {
+        text-align: center;
+    }
+
+    .heroCarousel__header {
+        font-size: 36px;
+        margin-top: 30%;
+    }
+
+    .heroCarousel__subheader {
+        font-size: 16px;
+    }
+
+    .button--landing {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .heroCarousel__buttons {
+        right: unset;
+        bottom: 30px;
+        top: unset;
+        left: 0;
+    }
+
+    .heroCarousel__button {
+        width: 18px;
+        height: 18px;
+    }
+
+    .heroCarousel__button--selected {
+        width: 10px;
+        height: 10px;
+    }
+
+    .topMenu__mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .topMenu__mobile:first-of-type .topMenu__mobile__icon {
+        margin-right: 10px;
+    }
+
+    .topMenu__mobile:last-of-type .topMenu__mobile__icon {
+        margin-left: 10px;
+    }
+
+    .topMenu__mobile__item {
+        background: transparent;
+        border: none;
+        outline: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 10px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .topMenu {
+        border-bottom: none;
+        border-top: 1px solid rgba(255, 255, 255, .5);
+        padding-top: 25px;
+        margin-top: -30px;
+    }
+
+    .flag {
+        margin-right: 0;
+    }
+
+    .topBar__language__inner {
+        border-bottom: none;
+    }
+
+    .portfolioItem {
+        width: 48%;
+    }
+
+    .aboutUs__content {
+        margin-left: 40%;
+    }
+
+    .technologies {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .img--technologies1, .img--technologies2, .img--technologies3 {
+        position: relative;
+        top: unset;
+        left: unset;
+        right: unset;
+        transform: none;
+        width: 100%;
+        max-width: 600px;
+        margin: 45px 0;
+    }
+
+    .img--technologies1 {
+        margin-top: 10px;
+    }
+
+    .aboutUs__header--technologies {
+        margin-left: 0;
+        text-align: center;
+        order: 1;
+    }
+
+    .img--technologies1 {
+        order: 2;
+    }
+
+    .technology {
+        margin: 0;
+    }
+
+    .technology--1 {
+        order: 3;
+    }
+
+    .img--technologies2 {
+        order: 4;
+    }
+
+    .technology--2 {
+        order: 5;
+    }
+
+    .img--technologies3 {
+        order: 6;
+    }
+
+    .technology--3 {
+        order: 7;
+    }
+
+    .mobileMenu {
+        position: fixed;
+        top: 0;
+        right: -7.5vw;
+        width: 90%;
+        height: 100vh;
+        background: #000;
+        z-index: 5;
+        transform: scaleX(0);
+        transform-origin: top right;
+        transition: .5s all;
+    }
+
+    .mobileMenu__close {
+        background: transparent;
+        width: 25px;
+        height: auto;
+        border: none;
+        outline: none;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+
+    .mobileMenu__close__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .mobileMenu__list {
+        margin-top: 80px;
+        list-style-type: none;
+        opacity: 0;
+        transition: .3s all;
+    }
+
+    .mobileMenu__list__item {
+        width: 80%;
+        text-align: right;
+        padding: 20px 50px 20px 0;
+        margin: 10px 0 10px 20%;
+        border-bottom: 1px solid #fff;
+    }
+}
+
+@media(max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+
+    .contact__content, .contact__map {
+        width: 100%;
+    }
+
+    .contact__map {
+        margin-bottom: 30px;
+    }
+
+    .aboutUs__img--1 {
+        position: relative;
+        left: unset;
+        top: unset;
+        display: block;
+        transform: none;
+    }
+
+    .aboutUs__content {
+        margin: auto;
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 576px) {
+    .footer__section {
+        width: 100%;
+    }
+
+    .footerHeader {
+        font-size: 21px;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 12px;
+    }
+
+    .footer__list__item {
+        margin: 5px 0;
+    }
+
+    .footer__list--flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topBar__logoLink__img {
+        width: 100%;
+    }
+
+    .section--portfolio {
+        margin-bottom: 60px;
+    }
+
+    .portfolioSection {
+        flex-direction: column;
+    }
+
+    .portfolioItem {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .button--process, .button--aboutUs, .button--portfolio {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .button--portfolio {
+        margin-top: 10px;
+    }
+
+    .creationProcess {
+        margin-top: 15px;
+    }
+
+    .creationProcess__desc,
+    .technology__desc
+    {
+        font-size: 14px;
+    }
+
+    .aboutUs__img--1 {
+        width: 100%;
+    }
+
+    .button--landing {
+        max-width: 90%;
+    }
+}
