@@ -7,6 +7,10 @@
     padding: 0;
 }
 
+body {
+    background: #000;
+}
+
 h1, h2, h3, h4, h5, h6, button {
     font-family: 'Cormorant', serif;
     color: #fff;
@@ -31,13 +35,13 @@ a {
 
 .container {
     width: 100%;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 :root {
     --gold: #B56437;
     --dark: #1E1E1E;
-    --siteWidth: clamp(200px, 85vw, 2000px);
+    --siteWidth: clamp(200px, 85vw, 2300px);
 }
 
 /* Hero section */
@@ -333,4 +337,258 @@ a {
     font-size: 32px;
     font-weight: 300;
     font-family: 'Cormorant', serif;
+}
+
+/* Section header */
+.sectionHeader {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 30px 0;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #fff;
+    position: relative;
+}
+
+.sectionHeader--right {
+    text-align: right;
+}
+
+.sectionHeader::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    width: 150px;
+    background: var(--gold);
+    height: 2px;
+}
+
+.sectionHeader--left::after {
+    left: 0;
+}
+
+.sectionHeader--right::after {
+    right: 0;
+}
+
+.section {
+    width: var(--siteWidth);
+    margin: auto;
+}
+
+/* About us */
+.aboutUs {
+    position: relative;
+    margin-top: 60px;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.aboutUs__img--1 {
+    left: calc((100vw - var(--siteWidth)) / 2 * (-1));
+    top: 0;
+}
+
+.aboutUs__img--2 {
+    right: 0;
+    top: 10vh;
+}
+
+.aboutUs__content {
+    margin-left: clamp(50px, 20%, 340px);
+    padding-top: 5vh;
+    max-width: 50%;
+}
+
+.aboutUs__header {
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.aboutUs__text {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.button--aboutUs {
+    height: 70px;
+    width: 400px;
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: 'Cormorant', serif;
+}
+
+/* Technologies */
+.section--technologies {
+    margin-top: 200px;
+    margin-bottom: 300px;
+}
+
+.technologies {
+    position: relative;
+    margin-top: 70px;
+}
+
+.img--technologies1 {
+    top: 0;
+    left: calc((100vw - var(--siteWidth)) / 2 * (-1));
+}
+
+.aboutUs__header--technologies {
+    max-width: 400px;
+    margin-left: clamp(200px, 35%, 700px);
+}
+
+.technology--1 {
+    margin-left: clamp(200px, 35%, 700px);
+    margin-top: 100px;
+}
+
+.technology {
+    position: relative;
+    max-width: 600px;
+}
+
+.technology__number {
+    font-weight: 700;
+    font-family: 'Cormorant', serif;
+    font-size: 190px;
+    line-height: 50px;
+    color: #1E1E1E;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.technology__name {
+    font-size: 48px;
+    padding-top: 15px;
+    margin-left: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.technology__desc {
+    margin-top: 30px;
+    margin-left: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.button--technology {
+    height: 70px;
+    width: 350px;
+    margin-top: 40px;
+    margin-left: 50px;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: 'Cormorant', serif;
+}
+
+.img--technologies2 {
+    right: 0;
+    top: 700px;
+}
+
+.img--technologies3 {
+    left: 10%;
+    top: 1200px;
+}
+
+.technology--2 {
+    margin-left: 20%;
+    margin-top: 300px;
+}
+
+.technology--3 {
+    margin-left: 60%;
+    margin-top: 300px;
+}
+
+/* Creation process */
+.creationProcess {
+    margin: 50px 0;
+}
+
+.creationProcess__desc {
+    text-align: center;
+    max-width: 900px;
+    margin: 15px auto;
+}
+
+.button--process {
+    height: 80px;
+    width: 420px;
+    text-align: center;
+    margin: 40px auto 20px;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Cormorant', serif;
+}
+
+/* Portfolio */
+.portfolioSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.portfolioItem {
+    width: 30%;
+    height: auto;
+}
+
+.portfolioItem__img {
+    width: 100%;
+    height: auto;
+}
+
+/* Contact */
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0 100px;
+}
+
+.contact__map {
+    width: 55%;
+    height: 400px;
+}
+
+.contact__content {
+    width: 40%;
+}
+
+.contact__header {
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.contact__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact__item__icon {
+    width: 30px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.contact__item__text {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+#googleMap > div {
+    position: relative !important;
 }

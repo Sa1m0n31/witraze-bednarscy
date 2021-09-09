@@ -7,6 +7,7 @@ import hero3 from '../static/img/hero3.jpg'
 import arrow from '../static/img/arrow-right.svg'
 import TopBar from "./TopBar";
 import TopMenu from "./TopMenu";
+import Button from "./Button";
 
 const HeroCarousel = () => {
     const [images, setImages] = useState([]);
@@ -67,9 +68,10 @@ const HeroCarousel = () => {
             <h2 className="heroCarousel__subheader">
                 Tworzymy witraże różnego typu i sprzedajemy rzeczy
             </h2>
-            <a className="button button--landing" href="#realizacje">
-                Nasze realizacje
-            </a>
+            <Button
+                text="Nasze realizacje"
+                extraClass="button--landing"
+                link="#realizacje" />
 
             <section className="heroCarousel__buttons">
                 <button id="heroCarousel1" className="heroCarousel__button" onClick={() => { heroChange(0); }}>
