@@ -55,7 +55,6 @@ const TopBar = () => {
                     <img className="flag" src={unitedKingdom} alt="angielski" />
                     <span className="d-desktop">English</span>
                 </a>
-
             </section>
         </section>
 

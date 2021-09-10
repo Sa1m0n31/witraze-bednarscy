@@ -7,6 +7,10 @@
     padding: 0;
 }
 
+html {
+    /*scroll-behavior: smooth;*/
+}
+
 body {
     background: #000;
 }
@@ -31,6 +35,10 @@ button, a {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 .container {
@@ -65,6 +73,7 @@ a {
 
 .heroLoader__img {
     transform: scale(.4);
+    max-width: 100%;
     transition: 20s all;
 }
 
@@ -72,17 +81,17 @@ a {
 .heroCarousel {
     display: none;
     opacity: 0;
-    position: relative;
     max-height: 100vh;
-    overflow: hidden;
     transition: 2s all ease-in-out;
     min-height: 600px;
+    position: relative;
 }
 
 .heroCarousel__content {
     width: var(--siteWidth);
     margin: auto;
     position: absolute;
+    z-index: 2;
     top: 0;
     left: 50%;
     height: 100%;
@@ -139,6 +148,7 @@ a {
     position: relative;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 
 .heroCarousel__image__img {
@@ -248,6 +258,14 @@ a {
     display: none;
     opacity: 0;
     transition: .5s all;
+}
+
+.topBar__language__inner--second--portfolio {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
 }
 
 .flag {
@@ -389,6 +407,8 @@ a {
     font-size: 32px;
     font-weight: 300;
     font-family: 'Cormorant', serif;
+    position: relative;
+    z-index: 9999;
 }
 
 /* Section header */
@@ -424,6 +444,8 @@ a {
 }
 
 .section {
+    position: relative;
+    z-index: 3;
     width: var(--siteWidth);
     margin: auto;
 }
@@ -589,6 +611,12 @@ a {
     align-items: flex-start;
 }
 
+#sectionPicker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .portfolioItem {
     width: 30%;
     height: auto;
@@ -738,6 +766,8 @@ a {
 
 /* Button hover effect */
 .button {
+    position: relative;
+    z-index: 5;
     background:transparent;
     background-position: 1% 50%;
     background-size: 300% 300%;
@@ -761,15 +791,47 @@ a {
         transform-origin: top left;
     }
 
-    .img--technologies3,
-    .button--landing,
-    .topBar__logoLink__img {
-        transform: scale(.8) !important;
+    @media(max-width: 996px) {
+        .button--landing {
+            transform-origin: top center;
+        }
+    }
+
+    @media(min-width: 1200px) {
+        .img--technologies3,
+        .button--landing,
+        .topBar__logoLink__img {
+            transform: scale(.8) !important;
+        }
     }
 
     .topMenu__link {
         font-size: 13px;
     }
+}
 
+/* Background - layers */
+.background {
+    position: absolute;
+    z-index: 1;
+}
 
+.background--1 {
+    top: 50vh;
+    left: -240px;
+}
+
+.background--2 {
+    right: -300px;
+    top: 120vh;
+}
+
+.background--3 {
+    top: 220vh;
+    left: -300px;
+}
+
+.background--4 {
+    top: 3500px;
+    right: -300px;
 }

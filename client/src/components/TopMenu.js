@@ -30,7 +30,7 @@ const TopMenu = () => {
         },
         {
             name: "Technologie",
-            permalink: "/"
+            permalink: "#technologie"
         },
         {
             name: "Referencje",

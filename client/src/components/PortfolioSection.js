@@ -7,9 +7,10 @@ import img3 from '../static/img/witraz2.png';
 import Button from "./Button";
 
 const PortfolioSection = () => {
-    return <section className="section section--portfolio">
+    return <section className="section section--portfolio" id="realizacje">
         <SectionHeader
             title="Portfolio"
+            portfolio={true}
             left={false} />
 
         <main className="portfolioSection">

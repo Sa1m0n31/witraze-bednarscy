@@ -7,7 +7,7 @@ import img3 from '../static/img/witraz7.png';
 import SingleTechnology from "./SingleTechnology";
 
 const TechnologiesSection = () => {
-    return <section className="section section--technologies">
+    return <section className="section section--technologies" id="technologie">
         <SectionHeader
             title="Technologie"
             left={false} />

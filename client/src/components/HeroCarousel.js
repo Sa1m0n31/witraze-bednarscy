@@ -9,10 +9,11 @@ import arrow from '../static/img/arrow-right.svg'
 import TopBar from "./TopBar";
 import TopMenu from "./TopMenu";
 import Button from "./Button";
+import background1 from "../static/img/background/warstwa2.svg";
 
 const HeroCarousel = () => {
     const [images, setImages] = useState([]);
-    const [currentImg, setCurrengImg] = useState(0);
+    const [currentImg, setCurrentImg] = useState(0);
 
     const hero1Ref = useRef(null);
     const hero2Ref = useRef(null);
@@ -21,6 +22,8 @@ const HeroCarousel = () => {
     const heroCarousel = useRef(null);
     const heroLoader = useRef(null);
     const heroLoaderImg = useRef(null);
+
+    let currentSlide = 0;
 
     const heroRefs = [hero1Ref, hero2Ref, hero3Ref];
 
@@ -40,7 +43,7 @@ const HeroCarousel = () => {
     }
 
     const nextHero = () => {
-        if(currentImg === 2) {
+       if(currentImg === 2) {
             heroChange(0);
         }
         else {
@@ -53,7 +56,7 @@ const HeroCarousel = () => {
             heroRefs[n].current.style.opacity = "1";
             heroRefs[currentImg].current.style.opacity = "0";
         }
-        setCurrengImg(n);
+        setCurrentImg(n);
     }
 
     const loaderLoad = () => {
@@ -82,6 +85,8 @@ const HeroCarousel = () => {
 
         {/* CAROUSEL */}
         <main className="heroCarousel" ref={heroCarousel}>
+            <img className="background background--1" src={background1} alt="tlo" />
+
             <figure className="heroCarousel__image">
                 <img onLoad={() => { firstImageLoad(); }} ref={hero1Ref} id="hero1" className="heroCarousel__image__img" src={hero1} alt="witraze-sakralne-bednarscy" />
                 <img ref={hero2Ref} id="hero2" className="heroCarousel__image__img" src={hero2} alt="witraze-sakralne-bednarscy" />

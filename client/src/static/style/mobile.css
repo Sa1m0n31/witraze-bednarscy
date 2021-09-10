@@ -321,7 +321,7 @@
         width: 90%;
         height: 100vh;
         background: #000;
-        z-index: 5;
+        z-index: 15;
         transform: scaleX(0);
         transform-origin: top right;
         transition: .5s all;
@@ -385,6 +385,10 @@
         margin: auto;
         max-width: 100%;
     }
+
+    .footer__list__item__link {
+        font-size: 13px;
+    }
 }
 
 @media(max-width: 576px) {
@@ -393,7 +397,7 @@
     }
 
     .footerHeader {
-        font-size: 21px;
+        font-size: 18px;
         width: 70%;
         margin-left: auto;
         margin-right: auto;
@@ -451,5 +455,18 @@
 
     .button--landing {
         max-width: 90%;
+    }
+
+    /* TMP */
+    .heroCarousel__image__img {
+        left: -760px;
+    }
+
+    .heroCarousel__image__img:nth-of-type(2) {
+        left: -300px;
+    }
+
+    .heroCarousel__image__img:last-of-type {
+        left: -350px;
     }
 }
