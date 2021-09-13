@@ -13,9 +13,14 @@ const TopBar = () => {
     const secondLanguage = useRef(null);
     const arrow = useRef(null);
 
-    const toggleLanguages = () => {
-        if(langHidden) showLanguages();
-        else hideLanguages();
+    const toggleLanguages = (e) => {
+        e.preventDefault();
+        if(langHidden) {
+            showLanguages();
+        }
+        else {
+            hideLanguages();
+        }
     }
 
     const showLanguages = () => {
@@ -43,13 +48,13 @@ const TopBar = () => {
 
             <section className="topBar__language">
                 <span className="d-desktop">Język</span>
-                <h4 className="topBar__language__inner">
+                <label className="topBar__language__inner" onClick={(e) => { toggleLanguages(e); }}>
                     <img className="flag" src={poland} alt="polski" />
                     <span className="d-desktop">Polski</span>
-                    <button className="languageBtn" onClick={() => { toggleLanguages(); }}>
+                    <button className="languageBtn" onClick={(e) => { e.preventDefault(); }}>
                         <img ref={arrow} className="languageBtn__img" src={arrowDown} alt="wiecej" />
                     </button>
-                </h4>
+                </label>
                 <a ref={secondLanguage} href="http://en.bednarscy.skylo-test3.pl"
                     className="topBar__language__inner topBar__language__inner--second">
                     <img className="flag" src={unitedKingdom} alt="angielski" />

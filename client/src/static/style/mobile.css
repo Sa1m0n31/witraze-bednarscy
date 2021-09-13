@@ -30,9 +30,31 @@
         transform: scale(.7);
         transform-origin: top left;
     }
+
+    @media(min-width: 996px) {
+        .img--technologies3 {
+            transform: scale(.7) !important;
+        }
+    }
 }
 
 @media(max-width: 1400px) {
+    @media(min-width: 768px) {
+        .aboutUs__img--1, .aboutUs__img--2 {
+            transform: scale(.7) !important;
+        }
+
+        .aboutUs__content {
+            margin-left: 25%;
+        }
+    }
+
+    @media(min-width: 996px) {
+        .img--technologies1, .img--technologies2  {
+            transform: scale(.7) !important;
+        }
+    }
+
     .heroCarousel__header {
         font-size: 48px;
     }
@@ -49,10 +71,6 @@
 
     .topMenu__link {
         font-size: 13px;
-    }
-
-    .aboutUs__img--1, .aboutUs__img--2 {
-        transform: scale(.7);
     }
 
     .aboutUs__img--1 {
@@ -180,7 +198,7 @@
 
     .heroCarousel__header {
         font-size: 36px;
-        margin-top: 30%;
+        margin-top: 25%;
     }
 
     .heroCarousel__subheader {
@@ -194,7 +212,7 @@
 
     .heroCarousel__buttons {
         right: unset;
-        bottom: 30px;
+        bottom: 12px;
         top: unset;
         left: 0;
     }
@@ -454,7 +472,20 @@
     }
 
     .button--landing {
-        max-width: 90%;
+        max-width: 70%;
+        font-size: 16px;
+    }
+
+    .heroCarousel__header {
+        font-size: 27px;
+    }
+
+    .heroCarousel__subheader {
+        font-size: 14px;
+    }
+
+    .topBar__facebookLink {
+        font-size: 10px;
     }
 
     /* TMP */

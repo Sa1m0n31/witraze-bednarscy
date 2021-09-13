@@ -6,7 +6,8 @@ const SectionHeader = ({title, left, portfolio}) => {
     const secondLanguage = useRef(null);
     const [catHidden, setCatHidden] = useState(true);
 
-    const toggleCategories = () => {
+    const toggleCategories = (e) => {
+        e.preventDefault();
         if(catHidden) showCategories();
         else hideCategories();
     }
@@ -27,16 +28,16 @@ const SectionHeader = ({title, left, portfolio}) => {
         setCatHidden(true);
     }
 
-    const switchCategories = (n) => {
+    const switchCategories = () => {
 
     }
 
     return <h2 id={portfolio ? "sectionPicker" : ""} className={left ? "sectionHeader sectionHeader--left" : "sectionHeader sectionHeader--right"}>
         {portfolio ?  <section className="topBar__language portfolioPicker">
             <span className="d-desktop">Rodzaj witraży</span>
-            <h4 className="topBar__language__inner">
+            <h4 className="topBar__language__inner" onClick={(e) => { toggleCategories(e); }}>
                 <span>sakralne</span>
-                <button className="languageBtn" onClick={() => { toggleCategories(); }}>
+                <button className="languageBtn">
                     <img ref={arrow} className="languageBtn__img" src={arrowDown} alt="wiecej" />
                 </button>
             </h4>

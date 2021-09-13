@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
     return <footer className="section footer">
         <section className="footer__section">
-            <h4 className="footerHeader">
+            <h4 className="footerHeader footerHeader--navigation">
                 Nawigacja
             </h4>
             <ul className="footer__list footer__list--flex">
@@ -45,7 +45,7 @@ const Footer = () => {
             </ul>
         </section>
         <section className="footer__section">
-            <h4 className="footerHeader">
+            <h4 className="footerHeader footerHeader--links">
                 Linki
             </h4>
             <ul className="footer__list">
@@ -72,7 +72,7 @@ const Footer = () => {
             </ul>
         </section>
         <section className="footer__section">
-            <h4 className="footerHeader">
+            <h4 className="footerHeader footerHeader--shop">
                 Sklep online
             </h4>
             <ul className="footer__list">

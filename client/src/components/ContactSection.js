@@ -8,7 +8,7 @@ import clock from '../static/img/clock.svg';
 import GoogleMap from "./GoogleMap";
 
 const ContactSection = () => {
-    return <section className="section">
+    return <section className="section section--contact">
         <SectionHeader
             title="Kontakt"
             left={true} />

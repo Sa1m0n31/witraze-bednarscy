@@ -6,7 +6,7 @@ import img2 from '../static/img/witraz5.png'
 import Button from "./Button";
 
 const AboutUsSection = () => {
-    return <section className="section">
+    return <section className="section section--aboutUs">
         <SectionHeader
             title="O nas"
             left={true} />

@@ -9,7 +9,7 @@ import "aos/dist/aos.css";
 function App() {
   /* Smooth scroll effect */
   const init = () => {
-      new SmoothScroll(document,100,22);
+      new SmoothScroll(document,140,22);
   }
 
   function SmoothScroll(target, speed, smooth) {
@@ -79,8 +79,6 @@ function App() {
 
   useEffect(() => {
       init();
-
-      console.log(AOS);
 
       AOS.init({
           duration: 1500,

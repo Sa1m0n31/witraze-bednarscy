@@ -3,7 +3,7 @@ import SectionHeader from "./SectionHeader";
 import Button from "./Button";
 
 const CreationProcessSection = () => {
-    return <section className="section">
+    return <section className="section section--creationProcess">
         <SectionHeader
             title="Proces tworzenia"
             left={true} />

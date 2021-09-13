@@ -12,6 +12,7 @@ html {
 }
 
 body {
+    position: relative;
     background: #000;
 }
 
@@ -37,7 +38,7 @@ a {
     color: inherit;
 }
 
-body {
+html, body {
     overflow-x: hidden;
 }
 
@@ -103,6 +104,7 @@ body {
     right: 0;
     top: 50%;
     z-index: 2;
+    opacity: .5;
 }
 
 .heroCarousel__buttons {
@@ -248,6 +250,7 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: 400;
+    cursor: pointer;
 }
 
 .topBar__language__inner--second {
@@ -257,15 +260,27 @@ body {
     z-index: 2;
     display: none;
     opacity: 0;
+    border-bottom: none;
     transition: .5s all;
 }
 
 .topBar__language__inner--second--portfolio {
     cursor: pointer;
-    background: transparent;
+    background: #000;
     border: none;
     outline: none;
+    z-index: 2;
     text-transform: uppercase;
+}
+
+@media(max-width: 996px) {
+    .topBar__language__inner--second--portfolio {
+        transform: translateX(-10px);
+    }
+
+    .topBar__language__inner--second--portfolio span {
+        padding: 0 10px;
+    }
 }
 
 .flag {
@@ -334,6 +349,7 @@ body {
     text-align: center;
     display: none;
     opacity: 0;
+    padding: 0 40%;
     transition: .4s opacity ease;
 }
 
@@ -355,6 +371,10 @@ body {
 
 .topMenu__submenu__item {
     padding: 12px 0;
+}
+
+.topMenu__submenu__item:not(:last-of-type) {
+    border-bottom: 1px solid var(--gold);
 }
 
 .topMenu__submenu__link {
@@ -397,7 +417,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 1s all ease-in-out;
+    transition: .7s all ease-in-out;
 }
 
 .button--landing {
@@ -430,7 +450,7 @@ body {
     content: "";
     position: absolute;
     bottom: -1px;
-    width: 150px !important;
+    width: 150px;
     background: var(--gold);
     height: 2px;
 }
@@ -448,6 +468,22 @@ body {
     z-index: 3;
     width: var(--siteWidth);
     margin: auto;
+}
+
+.section--aboutUs .sectionHeader::after {
+    width: 75px;
+}
+
+.section--creationProcess .sectionHeader::after {
+    width: 205px;
+}
+
+.section--portfolio .sectionHeader::after {
+    width: 105px;
+}
+
+.section--contact .sectionHeader::after {
+    width: 100px;
 }
 
 /* About us */
@@ -709,6 +745,18 @@ body {
     background: var(--gold);
 }
 
+.footerHeader--navigation::after {
+    width: 100px;
+}
+
+.footerHeader--links::after {
+    width: 60px;
+}
+
+.footerHeader--shop::after {
+    width: 125px;
+}
+
 .footer__list {
     list-style-type: none;
 }
@@ -769,7 +817,7 @@ body {
     position: relative;
     z-index: 5;
     background:transparent;
-    background-position: 1% 50%;
+    background-position: 1% 100%;
     background-size: 300% 300%;
     background-image: linear-gradient(45deg, transparent 0%, transparent 75%, rgba(235,235,235,0.5) 75%, transparent 100%);
 }
