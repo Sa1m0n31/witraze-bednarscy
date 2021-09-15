@@ -27,7 +27,7 @@ const PortfolioSection = () => {
 
         <Button
             text="Zobacz wszystkie stworzone witraże"
-            link="/portfolio"
+            link="/witraze"
             extraClass="button--process button--portfolio" />
     </section>
 }

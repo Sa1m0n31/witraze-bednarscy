@@ -7,11 +7,11 @@ import mail from '../static/img/mail.svg';
 import clock from '../static/img/clock.svg';
 import GoogleMap from "./GoogleMap";
 
-const ContactSection = () => {
+const ContactSection = ({page}) => {
     return <section className="section section--contact">
-        <SectionHeader
+        {page ? "" : <SectionHeader
             title="Kontakt"
-            left={true} />
+            left={true} />}
 
         <main className="contact">
             <section className="contact__map" data-aos="fade-right" data-aos-delay="300">

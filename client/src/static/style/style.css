@@ -185,6 +185,15 @@ html, body {
     width: 100%;
 }
 
+.container > .topBar, .container > .topMenu {
+    width: var(--siteWidth);
+    margin: auto;
+}
+
+.container > .topBar {
+    margin-top: 20px;
+}
+
 .topBar__top {
     display: flex;
     justify-content: space-between;
@@ -882,4 +891,212 @@ html, body {
 .background--4 {
     top: 3500px;
     right: -300px;
+}
+
+/* Witraze page */
+.pageHeader {
+    text-align: center;
+    margin: 70px auto 50px;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 10px;
+    width: fit-content;
+    width: -moz-max-content;
+}
+
+.pageContent__witraze {
+    margin: 60px auto 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: clamp(200px, 60vw, 2000px);
+}
+
+.pageContent__witraze__section {
+    position: relative;
+    width: 45%;
+    overflow: hidden;
+    height: 450px;
+    border: 1px solid rgba(255, 255, 255, .75);
+}
+
+.pageContent__witraze__img {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.pageContent__witraze__section__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, .8);
+    padding: 10%;
+}
+
+.pageContent__witraze__section__header {
+    text-align: center;
+    font-size: 28px;
+}
+
+.pageContent__witraze__section__desc {
+    text-align: center;
+    margin: 25px 0 40px;
+    font-size: 13px;
+}
+
+.button--witraze {
+    width: 250px;
+    height: 75px;
+    border-color: #B56437;
+}
+
+.pageContent__witrazeGrid {
+    width: var(--siteWidth);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+}
+
+/* Witraze subpage */
+.pageContent__witrazeGrid__item {
+    width: 30%;
+    height: 450px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, .8);
+}
+
+.pageContent__witrazeGrid__item .pageContent__witraze__section__content {
+    opacity: 0;
+    transition: .5s all ease-in-out;
+}
+
+.pageContent__witrazeGrid__item .pageContent__witraze__section__content:hover {
+    opacity: 1;
+}
+
+/* References */
+.pageContent__witrazeGrid--references .pageContent__witrazeGrid__item {
+    height: auto;
+}
+
+.pageContent__witrazeGrid--references .pageContent__witraze__img {
+    width: 100%;
+    height: auto;
+}
+
+/* Art gallery */
+.pageContent__artGallery {
+    position: relative;
+    margin-bottom: 220px;
+}
+
+.pageContent__artGallery__desc {
+    position: absolute;
+    top: 20%;
+    left: clamp(100px, 40%, 900px);
+    width: 40%;
+}
+
+.pageContent__artGallery__desc p {
+    margin-bottom: 25px;
+}
+
+.pageContent__artGallery__header {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.pageContent__artGallery__images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120%;
+    margin: 90px 0;
+}
+
+.pageContent__artGallery__images__img {
+    width: 30%;
+    height: auto;
+}
+
+/* About us */
+.aboutUs__section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.aboutUs__section--end {
+    justify-content: flex-end;
+}
+
+.aboutUs__section--center {
+    justify-content: center;
+}
+
+.aboutUs__section__header {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.aboutUs__section__content {
+    width: 45%;
+    margin-left: 50px;
+}
+
+.aboutUs__section__content p {
+    margin: 30px 0;
+}
+
+.aboutUs__section--end .aboutUs__section__content {
+    margin-right: 80px;
+}
+
+.aboutUs__section--end .aboutUs__section__header,
+.aboutUs__section--end .aboutUs__section__content p {
+    text-align: right;
+}
+
+.aboutUs__section__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: -30px;
+}
+
+.aboutUs__section__buttons .button--aboutUs {
+    width: 300px;
+    height: 60px;
+    font-size: 20px;
+    margin-right: 30px;
+}
+
+.aboutUs__section__img--1 {
+    width: 30%;
+    height: auto;
+}
+
+.aboutUs__section__img--2 {
+    width: 35%;
+    height: auto;
+}
+
+.aboutUs__section__img--3 {
+    width: 25%;
+    height: auto;
 }

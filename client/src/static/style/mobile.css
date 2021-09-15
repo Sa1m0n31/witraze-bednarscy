@@ -11,6 +11,10 @@
     .technology--1 {
         margin-left: 50%;
     }
+
+    .pageContent__artGallery__desc {
+        left: 45%;
+    }
 }
 
 @media(max-width: 1600px) {
@@ -35,6 +39,11 @@
         .img--technologies3 {
             transform: scale(.7) !important;
         }
+    }
+
+    .pageContent__artGallery__bigImage {
+        transform: scale(.75);
+        transform-origin: top left;
     }
 }
 
@@ -101,6 +110,23 @@
     .section--technologies {
         margin-bottom: 100px;
     }
+
+    .pageContent__witraze {
+        width: var(--siteWidth);
+    }
+
+    .pageContent__witrazeGrid__item {
+        width: 32%;
+        margin-bottom: 20px;
+    }
+
+    .pageContent__artGallery__desc {
+        top: 5%;
+    }
+
+    .pageContent__artGallery {
+        margin-bottom: 100px;
+    }
 }
 
 @media(max-width: 1200px) {
@@ -148,6 +174,29 @@
         width: 250px;
         height: 50px;
         font-size: 17px;
+    }
+
+    .pageContent__witrazeGrid__item {
+        width: 48%;
+        margin-bottom: 35px;
+    }
+
+    .pageContent__artGallery__bigImage {
+        transform: scale(.5);
+    }
+
+    .aboutUs__section__content p {
+        font-size: 14px;
+        margin: 25px 0;
+    }
+
+    .aboutUs__section__header {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .aboutUs__section__content {
+        width: 55%;
     }
 }
 
@@ -375,6 +424,14 @@
         margin: 10px 0 10px 20%;
         border-bottom: 1px solid #fff;
     }
+
+    .pageContent__witraze__section {
+        width: 48%;
+    }
+
+    .button--aboutUs {
+        font-size: 16px !important;
+    }
 }
 
 @media(max-width: 768px) {
@@ -406,6 +463,68 @@
 
     .footer__list__item__link {
         font-size: 13px;
+    }
+
+    .pageContent__witraze {
+        flex-direction: column;
+    }
+
+    .pageContent__witraze__section {
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 30px;
+    }
+
+    .pageContent__witrazeGrid__item {
+        width: 100%;
+    }
+
+    .pageContent__artGallery__bigImage {
+        display: block;
+        margin: 30px auto;
+        transform: none;
+        width: var(--siteWidth);
+    }
+
+    .pageContent__artGallery__desc {
+        position: relative;
+        left: 0;
+        width: var(--siteWidth);
+        margin: auto;
+    }
+
+    .pageContent__artGallery__images {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .aboutUs__section {
+        flex-direction: column;
+        width: var(--siteWidth);
+        margin: 20px auto;
+    }
+
+    .aboutUs__section > * {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .aboutUs__section .aboutUs__section__content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .aboutUs__section__header,
+    .aboutUs__section__content p {
+        text-align: left !important;
+    }
+
+    .aboutUs__section__content--2 {
+        order: 2;
+    }
+
+    .aboutUs__section__img--2 {
+        order: 1;
     }
 }
 
@@ -486,6 +605,27 @@
 
     .topBar__facebookLink {
         font-size: 10px;
+    }
+
+    .pageContent__witrazeGrid__item {
+        height: 300px;
+    }
+
+    .pageHeader {
+        font-size: 24px;
+    }
+
+    .button--aboutUs {
+        font-size: 13px !important;
+        text-align: center;
+    }
+
+    .button--aboutUs:first-of-type {
+        margin-right: 15px;
+    }
+
+    .button--aboutUs:last-of-type {
+        margin-right: 0;
     }
 
     /* TMP */

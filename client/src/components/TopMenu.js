@@ -16,41 +16,41 @@ const TopMenu = () => {
         },
         {
             name: "Witraże",
-            permalink: "/",
+            permalink: "/witraze",
             submenu: [
                 {
                     name: "Witraże sakralne",
-                    permalink: "/"
+                    permalink: "/witraze/witraze-sakralne"
                 },
                 {
                     name: "Witraże kameralne",
-                    permalink: "/"
+                    permalink: "/witraze/witraze-kameralne"
                 }
             ]
         },
         {
             name: "Technologie",
-            permalink: "#technologie"
+            permalink: "/technologie"
         },
         {
             name: "Referencje",
-            permalink: "/"
+            permalink: "/referencje"
         },
         {
             name: "Galeria sztuki",
-            permalink: "/"
+            permalink: "/galeria-sztuki"
         },
         {
             name: "Konserwacja",
-            permalink: "/"
+            permalink: "/konserwacja"
         },
         {
             name: "O nas",
-            permalink: "/"
+            permalink: "/o-nas"
         },
         {
             name: "Kontakt",
-            permalink: "/"
+            permalink: "/kontakt"
         },
     ]
 
@@ -89,12 +89,12 @@ const TopMenu = () => {
 
             <ul className="mobileMenu__list" ref={mobileMenuList}>
                 <li className="mobileMenu__list__item">
-                    <a className="mobileMenu__list__link" href='#'>
+                    <a className="mobileMenu__list__link" href='/'>
                         Strona główna
                     </a>
                 </li>
                 <li className="mobileMenu__list__item">
-                    <a className="mobileMenu__list__link" href='#'>
+                    <a className="mobileMenu__list__link" href='/'>
                         Witraże sakralne
                     </a>
                 </li>

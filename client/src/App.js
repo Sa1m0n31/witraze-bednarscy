@@ -5,6 +5,14 @@ import './static/style/mobile.css'
 import Homepage from "./pages/Homepage";
 import AOS from 'aos'
 import "aos/dist/aos.css";
+import Witraze from "./pages/Witraze";
+import WitrazeSubpage from "./pages/WitrazeSubpage";
+import Technologies from "./pages/Technologies";
+import References from "./pages/References";
+import ArtGallery from "./pages/ArtGallery";
+import Contact from "./pages/Contact";
+import AboutUs from "./pages/AboutUs";
+import Conservation from "./pages/Conservation";
 
 function App() {
   /* Smooth scroll effect */
@@ -87,9 +95,53 @@ function App() {
   }, []);
 
   return <Router>
+    {/* Website */}  
     <Route exact path="/">
         <Homepage />
     </Route>
+    <Route exact path="/witraze">
+        <Witraze />
+    </Route>
+    <Route path="/witraze/witraze-sakralne">
+        <WitrazeSubpage type="sakralne" />
+    </Route>
+    <Route path="/witraze/witraze-kameralne">
+        <WitrazeSubpage type="kameralne" />
+    </Route>
+    <Route path="/technologie">
+        <Technologies />
+    </Route>
+    <Route path="/referencje">
+        <References />
+    </Route>
+    <Route path="/galeria-sztuki">
+        <ArtGallery />
+    </Route>
+    <Route path="/konserwacja">
+        <Conservation />
+    </Route>
+    <Route path="/o-nas">
+        <AboutUs />
+    </Route>
+    <Route path="/kontakt">
+        <Contact />
+    </Route>
+
+    {/* Shop */}
+    <Route path="/sklep">
+
+    </Route>
+    <Route path="/produkt">
+
+    </Route>
+    <Route path="/koszyk">
+
+    </Route>
+    <Route path="/podsumowanie-zamowienia">
+
+    </Route>
+
+    {/* Admin panel */}
   </Router>
 }
 
