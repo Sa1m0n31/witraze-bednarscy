@@ -13,6 +13,8 @@ import ArtGallery from "./pages/ArtGallery";
 import Contact from "./pages/Contact";
 import AboutUs from "./pages/AboutUs";
 import Conservation from "./pages/Conservation";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 function App() {
   /* Smooth scroll effect */
@@ -95,7 +97,7 @@ function App() {
   }, []);
 
   return <Router>
-    {/* Website */}  
+    {/* Website */}
     <Route exact path="/">
         <Homepage />
     </Route>
@@ -125,6 +127,12 @@ function App() {
     </Route>
     <Route path="/kontakt">
         <Contact />
+    </Route>
+    <Route path="/polityka-prywatnosci">
+        <PrivacyPolicy />
+    </Route>
+    <Route path="/regulamin">
+        <TermsOfService />
     </Route>
 
     {/* Shop */}

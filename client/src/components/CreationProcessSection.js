@@ -18,7 +18,7 @@ const CreationProcessSection = () => {
 
             <Button
                 text="Zapoznaj się z pełnym procesem tworzenia witraży"
-                link="#"
+                link="/technologie"
                 extraClass="button--process" />
         </main>
     </section>

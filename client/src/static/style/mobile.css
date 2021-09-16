@@ -384,14 +384,17 @@
     .mobileMenu {
         position: fixed;
         top: 0;
-        right: -7.5vw;
-        width: 90%;
+        right: 0;
+        width: 100%;
         height: 100vh;
         background: #000;
         z-index: 15;
         transform: scaleX(0);
         transform-origin: top right;
         transition: .5s all;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
     }
 
     .mobileMenu__close {
@@ -414,15 +417,18 @@
         margin-top: 80px;
         list-style-type: none;
         opacity: 0;
+        width: 100%;
         transition: .3s all;
     }
 
     .mobileMenu__list__item {
         width: 80%;
-        text-align: right;
-        padding: 20px 50px 20px 0;
-        margin: 10px 0 10px 20%;
-        border-bottom: 1px solid #fff;
+        text-align: center;
+        padding: 20px 0;
+        margin: 10px auto;
+        text-transform: uppercase;
+        font-size: 15px;
+        border-bottom: 1px solid var(--gold);
     }
 
     .pageContent__witraze__section {
@@ -431,6 +437,33 @@
 
     .button--aboutUs {
         font-size: 16px !important;
+    }
+
+    .technologies__section {
+        flex-direction: column;
+    }
+
+    .technologies__section > * {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .technologies__section .aboutUs__section__content {
+        margin-left: 0;
+    }
+
+    .technologies__section--revert .technologies__section__img {
+        order: 1;
+    }
+
+    .technologies__section--revert .aboutUs__section__content {
+        order: 2;
+        margin-right: 0;
+    }
+
+    .heroCarousel__content {
+        width: 100%;
+        padding: 0 5vw;
     }
 }
 
@@ -525,6 +558,10 @@
 
     .aboutUs__section__img--2 {
         order: 1;
+    }
+
+    .pageContent__article p {
+        font-size: 14px;
     }
 }
 
@@ -626,6 +663,10 @@
 
     .button--aboutUs:last-of-type {
         margin-right: 0;
+    }
+
+    .pageContent--technologies {
+        margin-bottom: 0;
     }
 
     /* TMP */

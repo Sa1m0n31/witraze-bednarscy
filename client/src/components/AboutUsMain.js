@@ -10,9 +10,9 @@ const AboutUsMain = () => {
     return <main className="pageContent">
         <PageHeader title="O nas" />
         <section className="aboutUs__section">
-            <img className="aboutUs__section__img aboutUs__section__img--1" src={img1} alt="witraze-bednarscy" />
+            <img data-aos="fade-right" className="aboutUs__section__img aboutUs__section__img--1" src={img1} alt="witraze-bednarscy" />
 
-            <article className="aboutUs__section__content">
+            <article data-aos="fade-left" className="aboutUs__section__content">
                 <h3 className="aboutUs__section__header">
                     Witraże Bednarscy - o firmie
                 </h3>
@@ -37,7 +37,7 @@ const AboutUsMain = () => {
         </section>
 
         <section className="aboutUs__section aboutUs__section--end">
-            <article className="aboutUs__section__content aboutUs__section__content--2">
+            <article data-aos="fade-right" className="aboutUs__section__content aboutUs__section__content--2">
                 <h3 className="aboutUs__section__header">
                     Nasza historia - jak to się wszystko zaczęło?
                 </h3>
@@ -52,13 +52,13 @@ const AboutUsMain = () => {
                 </p>
             </article>
 
-            <img className="aboutUs__section__img aboutUs__section__img--2" src={img2} alt="witraze-bednarscy" />
+            <img data-aos="fade-left" className="aboutUs__section__img aboutUs__section__img--2" src={img2} alt="witraze-bednarscy" />
         </section>
 
         <section className="aboutUs__section aboutUs__section--center">
-            <img className="aboutUs__section__img aboutUs__section__img--3" src={img3} alt="witraze-bednarscy" />
+            <img data-aos="fade-right" className="aboutUs__section__img aboutUs__section__img--3" src={img3} alt="witraze-bednarscy" />
 
-            <article className="aboutUs__section__content aboutUs__section__content--3">
+            <article data-aos="fade-left" className="aboutUs__section__content aboutUs__section__content--3">
                 <h3 className="aboutUs__section__header">
                     Kolejny nagłówek
                 </h3>

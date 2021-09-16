@@ -1100,3 +1100,40 @@ html, body {
     width: 25%;
     height: auto;
 }
+
+/* Technologies */
+.technologies__section {
+    width: var(--siteWidth);
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.technologies__section .aboutUs__section__content {
+    width: 100%;
+}
+
+.aboutUs__section__content--marginRight {
+    margin-right: 50px;
+    margin-left: 0;
+}
+
+.pageContent--technologies {
+    margin-bottom: 100px;
+}
+
+.technologies__section__img {
+    width: 50%;
+}
+
+/* Privacy policy and terms of service */
+.pageContent__article {
+    width: var(--siteWidth);
+    margin: 40px auto;
+}
+
+.pageContent__article p {
+    margin: 20px 0;
+    text-align: justify;
+}

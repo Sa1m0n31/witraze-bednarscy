@@ -9,7 +9,7 @@ const WitrazeMain = () => {
         <PageHeader title="Witraże" />
 
         <main className="pageContent__witraze">
-            <section className="pageContent__witraze__section">
+            <section data-aos="fade-in" className="pageContent__witraze__section">
                 <img className="pageContent__witraze__img" src={witrazeSakralne} alt="witraze-sakralne" />
                 <main className="pageContent__witraze__section__content">
                     <h3 className="pageContent__witraze__section__header">
@@ -24,7 +24,7 @@ const WitrazeMain = () => {
                 </main>
             </section>
 
-            <section className="pageContent__witraze__section">
+            <section data-aos="fade-in" className="pageContent__witraze__section">
                 <img className="pageContent__witraze__img" src={witrazeKameralne} alt="witraze-kameralne" />
                 <main className="pageContent__witraze__section__content">
                     <h3 className="pageContent__witraze__section__header">

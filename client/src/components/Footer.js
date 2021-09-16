@@ -13,7 +13,7 @@ const Footer = () => {
                     </a>
                 </li>
                 <li className="footer__list__item">
-                    <a className="footer__list__item__link" href="/#technologie">
+                    <a className="footer__list__item__link" href="/technologie">
                         Technologie
                     </a>
                 </li>
@@ -28,17 +28,17 @@ const Footer = () => {
                     </a>
                 </li>
                 <li className="footer__list__item">
-                    <a className="footer__list__item__link" href="/galeria-sztuki">
+                    <a className="footer__list__item__link" href="/konserwacja">
                         Konserwacja
                     </a>
                 </li>
                 <li className="footer__list__item">
-                    <a className="footer__list__item__link" href="/galeria-sztuki">
+                    <a className="footer__list__item__link" href="/o-nas">
                         O nas
                     </a>
                 </li>
                 <li className="footer__list__item">
-                    <a className="footer__list__item__link" href="/galeria-sztuki">
+                    <a className="footer__list__item__link" href="/kontakt">
                         Kontakt
                     </a>
                 </li>
@@ -57,16 +57,6 @@ const Footer = () => {
                 <li className="footer__list__item">
                     <a className="footer__list__item__link" href="/regulamin">
                         Regulamin
-                    </a>
-                </li>
-                <li className="footer__list__item">
-                    <a className="footer__list__item__link" href="/zwroty">
-                        Zwroty
-                    </a>
-                </li>
-                <li className="footer__list__item">
-                    <a className="footer__list__item__link" href="/platnosci-i-dostawa">
-                        Płatność i dostawa
                     </a>
                 </li>
             </ul>

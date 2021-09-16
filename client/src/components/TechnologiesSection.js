@@ -26,19 +26,19 @@ const TechnologiesSection = () => {
                 name="Nazwa technologii"
                 desc="KRÓTKI OPIS, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam."
                 extraClass="technology--1"
-                link="#" />
+                link="/technologie" />
             <SingleTechnology
                 number="02"
                 name="Kolejna technologia"
                 desc="KRÓTKI OPIS, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam."
                 extraClass="technology--2"
-                link="#" />
+                link="/technologie" />
             <SingleTechnology
                 number="03"
                 name="Następna technologia"
                 desc="KRÓTKI OPIS, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam."
                 extraClass="technology--3"
-                link="#" />
+                link="/technologie" />
         </main>
     </section>
 }

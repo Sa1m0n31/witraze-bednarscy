@@ -10,7 +10,7 @@ const ReferencesMain = () => {
         <PageHeader title="Referencje" />
         <main className="pageContent__witrazeGrid pageContent__witrazeGrid--references">
             {references.map((item, index) => {
-                return <figure className="pageContent__witrazeGrid__item" key={index}>
+                return <figure data-aos="zoom-in" className="pageContent__witrazeGrid__item" key={index}>
                     <img className="pageContent__witraze__img" src={item} alt="referencje" />
                 </figure>
             })}

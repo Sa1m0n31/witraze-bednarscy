@@ -54,7 +54,7 @@ const WitrazeSubpageMain = ({type}) => {
         <PageHeader title={type === "sakralne" ? "Witraże sakralne" : "Witraże kameralne"} />
         <main className="pageContent__witrazeGrid">
             {witraze.map((item, index) => {
-                return <section className="pageContent__witrazeGrid__item" key={index}>
+                return <section data-aos="fade-in" className="pageContent__witrazeGrid__item" key={index}>
                     <img className="pageContent__witraze__img" src={item.img} alt={item.title} />
                     <main className="pageContent__witraze__section__content">
                         <h3 className="pageContent__witraze__section__header">
