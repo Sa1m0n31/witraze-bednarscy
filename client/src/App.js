@@ -15,6 +15,10 @@ import AboutUs from "./pages/AboutUs";
 import Conservation from "./pages/Conservation";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import Shop from "./pages/Shop";
+import SingleProduct from "./pages/SingleProduct";
+import Cart from "./pages/Cart";
+import ShippingAndPayment from "./pages/ShippingAndPayment";
 
 function App() {
   /* Smooth scroll effect */
@@ -137,16 +141,16 @@ function App() {
 
     {/* Shop */}
     <Route path="/sklep">
-
+        <Shop />
     </Route>
     <Route path="/produkt">
-
+        <SingleProduct />
     </Route>
     <Route path="/koszyk">
-
+        <Cart />
     </Route>
     <Route path="/podsumowanie-zamowienia">
-
+        <ShippingAndPayment />
     </Route>
 
     {/* Admin panel */}

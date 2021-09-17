@@ -45,6 +45,10 @@
         transform: scale(.75);
         transform-origin: top left;
     }
+
+    .shop__products__singleProduct {
+        width: 30%;
+    }
 }
 
 @media(max-width: 1400px) {
@@ -127,6 +131,18 @@
     .pageContent__artGallery {
         margin-bottom: 100px;
     }
+
+    .shop__products__singleProduct__title {
+        font-size: 24px;
+    }
+
+    .shop__products__singleProduct__price {
+        font-size: 21px;
+    }
+
+    .shippingAndPayment__form__section {
+        width: 48%;
+    }
 }
 
 @media(max-width: 1200px) {
@@ -197,6 +213,49 @@
 
     .aboutUs__section__content {
         width: 55%;
+    }
+
+    .shop__categories {
+        width: 30%;
+        flex-basis: 30%;
+    }
+
+    .shop__products {
+        width: 65%;
+        flex-basis: 65%;
+    }
+
+    .shop__products__singleProduct {
+        width: 48%;
+    }
+
+    .cart__item__imgWrapper {
+        width: 150px;
+        height: 150px;
+    }
+
+    .cart__item__key {
+        font-size: 12px;
+    }
+
+    .cart__item__value {
+        font-size: 14px;
+    }
+
+    .cart__sum {
+        font-size: 24px;
+    }
+
+    .cart__item {
+        flex-direction: column;
+    }
+
+    .cart__item > * {
+        margin-bottom: 30px;
+    }
+
+    .cart__item__key {
+        padding-bottom: 10px;
     }
 }
 
@@ -465,6 +524,19 @@
         width: 100%;
         padding: 0 5vw;
     }
+
+    .shop__products__singleProduct {
+        width: 100%;
+    }
+
+    .shippingAndPayment__form {
+        flex-direction: column;
+    }
+
+    .shippingAndPayment__form__section {
+        width: 100%;
+        margin-bottom: 40px;
+    }
 }
 
 @media(max-width: 768px) {
@@ -562,6 +634,27 @@
 
     .pageContent__article p {
         font-size: 14px;
+    }
+
+    .shop__main {
+        flex-direction: column;
+    }
+
+    .shop__categories, .shop__products {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .shop__products {
+        margin-top: 40px;
+    }
+
+    .shop {
+        margin-bottom: 40px;
+    }
+
+    .shop__products__header {
+        font-size: 24px;
     }
 }
 
@@ -667,6 +760,10 @@
 
     .pageContent--technologies {
         margin-bottom: 0;
+    }
+
+    .cart__sum {
+        font-size: 18px;
     }
 
     /* TMP */

@@ -7,7 +7,7 @@ import poland from '../static/img/poland.svg'
 import unitedKingdom from '../static/img/united-kingdom.svg'
 import arrowDown from '../static/img/arrow-down-gold.svg'
 
-const TopBar = () => {
+const TopBar = ({shop}) => {
     const [langHidden, setLangHidden] = useState(true);
 
     const secondLanguage = useRef(null);
@@ -68,10 +68,10 @@ const TopBar = () => {
                 <img className="topBar__logoLink__img" src={logo} alt="witraze-sakralne-bednarscy" />
             </a>
 
-            <a className="topBar__shop d-desktop" href="/sklep">
+            {shop ? "" : <a className="topBar__shop d-desktop" href="/sklep">
                 Odwiedź nasz sklep online
                 <img className="topBar__shop__img" src={shopIcon} alt="sklep-z-witrazami" />
-            </a>
+            </a>}
         </section>
     </aside>
 }
