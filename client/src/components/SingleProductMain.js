@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import ShopCategories from "./ShopCategories";
 
 import img from '../static/img/witraz2.png'
@@ -15,8 +15,11 @@ import {
     MOUSE_ACTIVATION,
     TOUCH_ACTIVATION
 } from "react-image-magnifiers";
+import AddToCartModal from "./AddToCartModal";
 
 const SingleProductMain = () => {
+    let modalWrapper = useRef(null);
+
     const product = {
         title: "Witraż piękny",
         price: 100,
@@ -53,11 +56,24 @@ const SingleProductMain = () => {
         }
     ]
 
-    const enlargeImage = () => {
+    const addToCart = (e) => {
+        e.preventDefault();
+        modalWrapper.current.style.zIndex = "10000";
+        modalWrapper.current.style.opacity = "1";
+    }
 
+    const hideModal = () => {
+        modalWrapper.current.style.opacity = "0";
+        setTimeout(() => {
+            modalWrapper.current.style.zIndex = "-1";
+        }, 600);
     }
 
     return <main className="single">
+        <div className="modalWrapper" ref={modalWrapper}>
+            <AddToCartModal hideModal={hideModal} />
+        </div>
+
         <ShopCategories />
 
         <main className="single__product">
@@ -116,7 +132,7 @@ const SingleProductMain = () => {
                             {product.desc}
                         </p>
                     </article>
-                    <button className="button button--addToCart" onClick={() => {  }}>
+                    <button className="button button--addToCart" onClick={(e) => { addToCart(e); }}>
                         Dodaj do koszyka
                     </button>
                 </section>
@@ -137,7 +153,7 @@ const SingleProductMain = () => {
                         <h4 className="shop__products__singleProduct__price">
                             {item.price} PLN
                         </h4>
-                        <button className="button button--addToCart" onClick={() => {  }}>
+                        <button className="button button--addToCart" onClick={(e) => { addToCart(e); }}>
                             Dodaj do koszyka
                         </button>
                     </a>

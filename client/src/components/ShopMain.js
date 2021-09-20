@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 import img1 from '../static/img/witraz7.png'
 import img2 from '../static/img/witraz3.png'
 import img3 from '../static/img/witraz5.png'
 import BackHome from "./BackHome";
 import ShopCategories from "./ShopCategories";
+import AddToCartModal from "./AddToCartModal";
 
 const ShopMain = () => {
+    let modalWrapper = useRef(null);
+
     const products = [
         {
             title: 'Witraż piękny',
@@ -58,7 +61,24 @@ const ShopMain = () => {
         },
     ]
 
+    const addToCart = (e) => {
+        e.preventDefault();
+        modalWrapper.current.style.zIndex = "10000";
+        modalWrapper.current.style.opacity = "1";
+    }
+
+    const hideModal = () => {
+        modalWrapper.current.style.opacity = "0";
+        setTimeout(() => {
+            modalWrapper.current.style.zIndex = "-1";
+        }, 600);
+    }
+
     return <section className="shop">
+        <div className="modalWrapper" ref={modalWrapper}>
+            <AddToCartModal hideModal={hideModal} />
+        </div>
+
         <BackHome />
         <main className="shop__main">
             <ShopCategories />
@@ -79,7 +99,7 @@ const ShopMain = () => {
                             <h4 className="shop__products__singleProduct__price">
                                 {item.price} PLN
                             </h4>
-                            <button className="button button--addToCart" onClick={() => {  }}>
+                            <button className="button button--addToCart" onClick={(e) => { addToCart(e) }}>
                                 Dodaj do koszyka
                             </button>
                         </a>

@@ -1,10 +1,14 @@
 import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import AOS from 'aos'
+import "aos/dist/aos.css";
+
+import './static/style/admin.css'
+import './static/style/adminMobile.css'
 import './static/style/style.css'
 import './static/style/mobile.css'
 import Homepage from "./pages/Homepage";
-import AOS from 'aos'
-import "aos/dist/aos.css";
 import Witraze from "./pages/Witraze";
 import WitrazeSubpage from "./pages/WitrazeSubpage";
 import Technologies from "./pages/Technologies";
@@ -19,6 +23,22 @@ import Shop from "./pages/Shop";
 import SingleProduct from "./pages/SingleProduct";
 import Cart from "./pages/Cart";
 import ShippingAndPayment from "./pages/ShippingAndPayment";
+import LoginPage from "./admin/pages/LoginPage";
+import PanelPage from "./admin/pages/PanelPage";
+import PanelProducts from "./admin/pages/PanelProducts";
+import PanelOrders from "./admin/pages/PanelOrders";
+import PanelCategories from "./admin/pages/PanelCategories";
+import PanelPayment from "./admin/pages/PanelPayment";
+import PanelShipping from "./admin/pages/PanelShipping";
+import PanelSettings from "./admin/pages/PanelSettings";
+import PanelCoupons from "./admin/pages/PanelCoupons";
+import PanelImages from "./admin/pages/PanelImages";
+import PanelOthers from "./admin/pages/PanelOthers";
+import NewsletterPage from "./admin/pages/NewsletterPage";
+import PanelStocks from "./admin/pages/PanelStocks";
+import AddStockPage from "./admin/pages/AddStockPage";
+import AddProductPage from "./admin/pages/AddProductPage";
+import AddPostPage from "./admin/pages/AddPostPage";
 
 function App() {
   /* Smooth scroll effect */
@@ -154,6 +174,56 @@ function App() {
     </Route>
 
     {/* Admin panel */}
+      <Route exact path='/admin'>
+          <LoginPage />
+      </Route>
+      <Route exact path="/panel">
+          <PanelPage />
+      </Route>
+      <Route path="/panel/produkty">
+          <PanelProducts />
+      </Route>
+      <Route path="/panel/zamowienia">
+          <PanelOrders />
+      </Route>
+      <Route path="/panel/kategorie">
+          <PanelCategories />
+      </Route>
+      <Route path="/panel/platnosci">
+          <PanelPayment />
+      </Route>
+      <Route path="/panel/wysylka">
+          <PanelShipping />
+      </Route>
+      <Route path="/panel/ustawienia">
+          <PanelSettings />
+      </Route>
+      <Route path="/panel/kupony">
+          <PanelCoupons />
+      </Route>
+      <Route path="/panel/zdjecia">
+          <PanelImages />
+      </Route>
+      <Route path="/panel/pozostale">
+          <PanelOthers />
+      </Route>
+      <Route path="/panel/newsletter">
+          <NewsletterPage />
+      </Route>
+      <Route path="/panel/stany-magazynowe">
+          <PanelStocks />
+      </Route>
+      <Route path="/panel/dodaj-stan-magazynowy">
+          <AddStockPage />
+      </Route>
+
+      {/* Add content pages */}
+      <Route path="/panel/dodaj-produkt">
+          <AddProductPage />
+      </Route>
+      <Route path="/panel/dodaj-wpis">
+          <AddPostPage />
+      </Route>
   </Router>
 }
 

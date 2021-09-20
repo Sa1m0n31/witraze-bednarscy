@@ -10,6 +10,7 @@
     "axios": "^0.21.4",
     "formik": "^2.2.9",
     "google-maps-react": "^2.0.6",
+    "jodit-react": "^1.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-image-magnifiers": "^1.4.0",
@@ -18,7 +19,19 @@
     "react-scripts": "4.0.3",
     "react-siema": "^1.0.1",
     "web-vitals": "^1.1.2",
-    "yup": "^0.32.9"
+    "yup": "^0.32.9",
+    "bootstrap": "^5.0.2",
+    "react-animated-modal": "^1.1.1",
+    "react-async": "^10.0.1",
+    "react-bootstrap": "^1.6.1",
+    "react-cookie-consent": "^6.3.0",
+    "react-helmet": "^6.1.0",
+    "react-image-gallery": "^1.1.1",
+    "react-image-lightbox": "^5.1.1",
+    "react-images-upload": "^1.2.8",
+    "react-loader-spinner": "^4.0.0",
+    "react-modal": "^3.14.3",
+    "react-tooltip": "^4.2.21"
   },
   "scripts": {
     "start": "react-scripts start",
