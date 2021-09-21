@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import AOS from 'aos'
@@ -39,8 +39,75 @@ import PanelStocks from "./admin/pages/PanelStocks";
 import AddStockPage from "./admin/pages/AddStockPage";
 import AddProductPage from "./admin/pages/AddProductPage";
 import AddPostPage from "./admin/pages/AddPostPage";
+import { v4 as uuidv4 } from 'uuid';
+
+/* Context */
+const CartContext = React.createContext(null);
 
 function App() {
+  const [cartContent, setCartContent] = useState(localStorage.getItem('sec-cart') ? JSON.parse(localStorage.getItem('sec-cart')) : []);
+
+    const addToCart = (id, title, amount, img, price, dedication) => {
+        const uuid = uuidv4();
+
+        let existedUuid, existedAmount = 0;
+
+        /* If product already in cart - increase amount */
+        if(cartContent.findIndex((item) => {
+            if(item.id === id) {
+                existedUuid = item.uuid;
+                existedAmount = item.amount;
+                return true;
+            }
+            else return false;
+        }) !== -1) {
+            if(existedUuid) {
+                editCart(existedUuid, id, title, existedAmount+amount, img, price);
+            }
+        }
+        else {
+            localStorage.setItem('sec-cart', JSON.stringify([...cartContent, {
+                uuid, id, title, amount, img, price, dedication
+            }]));
+
+            setCartContent([...cartContent, {
+                uuid, id, title, amount, img, price, dedication
+            }]);
+        }
+    }
+
+    const editCart = (uuid, id, title, amount, img, price, dedication = null) => {
+        localStorage.setItem('sec-cart', JSON.stringify(cartContent.map((item) => {
+            if(item.uuid === uuid) {
+                return {
+                    uuid, id, title, amount, img, price, dedication
+                }
+            }
+            else return item;
+        })));
+
+        setCartContent(cartContent.map((item) => {
+            if(item.uuid === uuid) {
+                return {
+                    uuid, id, title, amount, img, price, dedication
+                }
+            }
+            else return item;
+        }));
+    }
+
+    const removeFromCart = (uuid) => {
+        const localStorageItem = localStorage.getItem('sec-cart');
+        if(localStorageItem) {
+            const newCart = JSON.parse(localStorage.getItem('sec-cart'))
+                .filter((item) => {
+                    return item.uuid !== uuid;
+                });
+            setCartContent(newCart);
+            localStorage.setItem('sec-cart', JSON.stringify(newCart));
+        }
+    }
+
   /* Smooth scroll effect */
   const init = () => {
       new SmoothScroll(document,140,22);
@@ -120,7 +187,8 @@ function App() {
       });
   }, []);
 
-  return <Router>
+  return <CartContext.Provider value={{cartContent, addToCart, editCart, removeFromCart}}>
+      <Router>
     {/* Website */}
     <Route exact path="/">
         <Homepage />
@@ -225,6 +293,8 @@ function App() {
           <AddPostPage />
       </Route>
   </Router>
+  </CartContext.Provider>
 }
 
 export default App;
+export {CartContext}

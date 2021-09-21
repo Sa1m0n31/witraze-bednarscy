@@ -134,6 +134,7 @@ const AddProductContent = () => {
 
     const setInitialValues = (productData) => {
         setName(productData.name);
+        setNameEn(productData.name_en);
 
         setPrice(productData.price);
 
@@ -141,7 +142,22 @@ const AddProductContent = () => {
         setHidden(productData.hidden);
         setRecommendation(productData.recommendation);
 
+        setKey1(productData.key1);
+        setKey2(productData.key2);
+        setKey3(productData.key3);
+        setValue1(productData.value1);
+        setValue2(productData.value2);
+        setValue3(productData.value3);
+
+        setKeyEn1(productData.key_en1);
+        setKeyEn2(productData.key_en2);
+        setKeyEn3(productData.key_en3);
+        setValueEn1(productData.value_en1);
+        setValueEn2(productData.value_en2);
+        setValueEn3(productData.value_en3);
+
         setShortDescription(productData.description);
+        setShortDescriptionEn(productData.description_en);
     }
 
     const isInArray = (categoryId) => {
@@ -252,7 +268,7 @@ const AddProductContent = () => {
         </header>
         {addMsg === "" ? <form className="addProduct__form addProduct__form--addProduct"
                                encType="multipart/form-data"
-                               action={update ? "http://localhost:3000/product/update-product" : "http://localhost:3000/product/add-product"}
+                               action={update ? "http://localhost:5000/product/update-product" : "http://localhost:5000/product/add-product"}
                                method="POST"
         >
             <section className="addProduct__form__section">
@@ -334,7 +350,7 @@ const AddProductContent = () => {
                 <label className="jodit--label">
                     <span>Krótki opis angielski</span>
                     <JoditEditor
-                        name="shortDescription"
+                        name="shortDescriptionEn"
                         ref={editorREn}
                         value={shortDescriptionEn}
                         tabIndex={1} // tabIndex of textarea

@@ -1,11 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, {useState, useEffect, useRef, useContext} from 'react'
 import ShopCategories from "./ShopCategories";
 
 import img from '../static/img/witraz2.png'
-import img2 from "../static/img/witraz3.png";
-import img1 from "../static/img/witraz7.png";
-import img3 from "../static/img/witraz5.png";
-import searchIcon from '../static/img/search_small_plus.svg'
 
 import {
     Magnifier,
@@ -16,48 +12,44 @@ import {
     TOUCH_ACTIVATION
 } from "react-image-magnifiers";
 import AddToCartModal from "./AddToCartModal";
+import {getRecommendations} from "../admin/helpers/productFunctions";
+import convertToURL, {convertToString} from "../helpers/convertToURL";
+import settings from "../helpers/settings";
+import {getProductByName} from "../helpers/productFunctions";
+import {CartContext} from "../App";
 
 const SingleProductMain = () => {
     let modalWrapper = useRef(null);
 
-    const product = {
-        title: "Witraż piękny",
-        price: 100,
-        img: img,
-        desc: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et",
-        width: 123,
-        height: 200
-    }
+    const { addToCart } = useContext(CartContext);
 
-    const crossSells = [
-        {
-            title: 'Witraż piękny',
-            img: img2,
-            price: 499,
-            permalink: "/"
-        },
-        {
-            title: 'Witraż piękny',
-            img: img1,
-            price: 499,
-            permalink: "/"
-        },
-        {
-            title: 'Witraż piękny',
-            img: img3,
-            price: 499,
-            permalink: "/"
-        },
-        {
-            title: 'Witraż piękny',
-            img: img1,
-            price: 499,
-            permalink: "/"
-        }
-    ]
+    const [product, setProduct] = useState({});
+    const [crossSells, setCrossSells] = useState([]);
+    const [dedication, setDedication] = useState("");
 
-    const addToCart = (e) => {
+    useEffect(() => {
+        /* Get product info */
+        getProductByName(convertToString(window.location.pathname.split("/")[2]))
+            .then(res => {
+                const result = res.data?.result;
+                if(result) {
+                    const productInfo = result[0];
+                    console.log(productInfo);
+                    setProduct(productInfo);
+                    console.log(productInfo.file_path);
+                }
+            });
+
+        getRecommendations()
+            .then(res => {
+                console.log(res.data);
+                setCrossSells(res?.data?.result);
+            });
+    }, []);
+
+    const addProductToCart = (e, id, title, amount, img, price) => {
         e.preventDefault();
+        addToCart(id, title, amount, img, price, dedication);
         modalWrapper.current.style.zIndex = "10000";
         modalWrapper.current.style.opacity = "1";
     }
@@ -78,7 +70,7 @@ const SingleProductMain = () => {
 
         <main className="single__product">
             <h2 className="shop__products__header">
-                {product.title}
+                {product.name}
 
                 <span className="shop__products__header__price">
                     {product.price} PLN
@@ -88,9 +80,9 @@ const SingleProductMain = () => {
             <main className="single__product__main">
                 <figure className="single__product__main__imgWrapper">
                     <GlassMagnifier
-                        imageSrc={product.img}
-                        largeImageSrc={product.img}
-                        imageAlt="Example"
+                        imageSrc={`${settings.API_URL}/image?url=/media/${product.file_path}`}
+                        largeImageSrc={`${settings.API_URL}/image?url=/media/${product.file_path}`}
+                        imageAlt={product.name}
                     />
                 </figure>
 
@@ -100,39 +92,51 @@ const SingleProductMain = () => {
                             Specyfikacja produktu
                         </h3>
 
-                        <h4 className="single__product__main__spec__item">
+                        {product.key1 ? <h4 className="single__product__main__spec__item">
                             <span className="single__product__main__spec__key">
-                                Nazwa produktu
+                                {product.key1}
                             </span>
                             <span className="single__product__main__spec__value">
-                                {product.title}
+                                {product.value1}
                             </span>
-                        </h4>
-                        <h4 className="single__product__main__spec__item">
+                        </h4> : ""}
+                        {product.key2 ? <h4 className="single__product__main__spec__item">
                             <span className="single__product__main__spec__key">
-                                Szerokość
+                                {product.key2}
                             </span>
                             <span className="single__product__main__spec__value">
-                                {product.width}
+                                {product.value2}
                             </span>
-                        </h4>
-                        <h4 className="single__product__main__spec__item">
+                        </h4> : ""}
+                        {product.key3 ? <h4 className="single__product__main__spec__item">
                             <span className="single__product__main__spec__key">
-                                Wysokość
+                                {product.key3}
                             </span>
                             <span className="single__product__main__spec__value">
-                                {product.height}
+                                {product.value3}
                             </span>
-                        </h4>
+                        </h4> : ""}
 
                         <h3 className="single__product__main__spec__header">
                             Opis
                         </h3>
-                        <p className="single__product__main__spec__desc">
-                            {product.desc}
-                        </p>
+                        <div className="single__product__main__spec__desc" dangerouslySetInnerHTML={{__html: product.description}}>
+
+                        </div>
+
+                        <h3 className="single__product__main__spec__header">
+                            Dedykacja (+50 PLN)
+                        </h3>
+                        <label>
+                            <textarea
+                                className="dedicationInput"
+                                name="dedication"
+                                placeholder="Tu wpisz swoją dedykację"
+                                onChange={(e) => { setDedication(e.target.value); }}
+                                value={dedication} />
+                        </label>
                     </article>
-                    <button className="button button--addToCart" onClick={(e) => { addToCart(e); }}>
+                    <button className="button button--addToCart" onClick={(e) => { addProductToCart(e, product.id, product.name, 1, product.file_path, product.price); }}>
                         Dodaj do koszyka
                     </button>
                 </section>
@@ -143,17 +147,17 @@ const SingleProductMain = () => {
             </h2>
             <section className="shop__products__products">
                 {crossSells.map((item, index) => {
-                    return <a className="shop__products__singleProduct" key={index} href={`/produkt/${item.permalink}`}>
+                    return <a className="shop__products__singleProduct" key={index} href={`/produkt/${convertToURL(item.name)}`}>
                         <figure className="shop__products__singleProduct__imgWrapper">
-                            <img className="shop__products__singleProduct__img" src={item.img} alt={item.title} />
+                            <img className="shop__products__singleProduct__img" src={settings.API_URL + "/image?url=/media/" + item.file_path} alt={item.name} />
                         </figure>
                         <h3 className="shop__products__singleProduct__title">
-                            {item.title}
+                            {item.name}
                         </h3>
                         <h4 className="shop__products__singleProduct__price">
                             {item.price} PLN
                         </h4>
-                        <button className="button button--addToCart" onClick={(e) => { addToCart(e); }}>
+                        <button className="button button--addToCart" onClick={(e) => { addProductToCart(e, item.id, item.name, 1, item.file_path, item.price); }}>
                             Dodaj do koszyka
                         </button>
                     </a>

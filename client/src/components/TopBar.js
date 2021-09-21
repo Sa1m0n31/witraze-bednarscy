@@ -41,7 +41,7 @@ const TopBar = ({shop}) => {
 
     return <aside className="topBar">
         <section className="topBar__top">
-            <a className="topBar__facebookLink" href="#">
+            <a className="topBar__facebookLink" target="_blank" href="https://www.facebook.com/Galeria-Bednarscy-112828703753388">
                 <img className="topBar__facebookLink__img" src={fbIcon} alt="facebook" />
                 Znajdź nas na Facebooku
             </a>

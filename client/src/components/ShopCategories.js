@@ -13,7 +13,9 @@ const ShopCategories = () => {
 
     return <menu className="shop__categories">
         <h3 className="shop__categories__header">
-            Witraże
+            <a href="/sklep">
+                Witraże
+            </a>
         </h3>
         <ul className="shop__categories__list">
             {categories?.map((item) => {

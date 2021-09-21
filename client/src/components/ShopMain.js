@@ -1,68 +1,54 @@
-import React, { useState, useEffect, useRef } from 'react'
-
-import img1 from '../static/img/witraz7.png'
-import img2 from '../static/img/witraz3.png'
-import img3 from '../static/img/witraz5.png'
+import React, {useState, useEffect, useRef, useContext} from 'react'
+import {CartContext} from "../App";
 import BackHome from "./BackHome";
 import ShopCategories from "./ShopCategories";
 import AddToCartModal from "./AddToCartModal";
+import {getAllProducts, getProductsByCategory} from "../helpers/productFunctions";
+import settings from "../helpers/settings";
+import convertToURL from "../helpers/convertToURL";
+import axios from "axios";
 
 const ShopMain = () => {
     let modalWrapper = useRef(null);
 
-    const products = [
-        {
-            title: 'Witraż piękny',
-            img: img1,
-            price: 499,
-            permalink: "/"
-        },
-        {
-            title: 'Witraż piękny',
-            img: img2,
-            price: 499,
-            permalink: "/"
-        },
-        {
-            title: 'Witraż piękny',
-            img: img3,
-            price: 499,
-            permalink: "/"
-        },
-        {
-            title: 'Witraż piękny',
-            img: img1,
-            price: 499,
-            permalink: "/"
-        },
-        {
-            title: 'Witraż piękny',
-            img: img2,
-            price: 499,
-            permalink: "/"
-        },
-        {
-            title: 'Witraż piękny',
-            img: img1,
-            price: 499,
-            permalink: "/"
-        },
-        {
-            title: 'Witraż piękny',
-            img: img3,
-            price: 499,
-            permalink: "/"
-        },
-        {
-            title: 'Witraż piękny',
-            img: img1,
-            price: 499,
-            permalink: "/"
-        },
-    ]
+    const { addToCart } = useContext(CartContext);
 
-    const addToCart = (e) => {
+    const [products, setProducts] = useState([]);
+    const [currentCategory, setCurrentCategory] = useState("Witraże");
+
+    useEffect(() => {
+        /* Get current category */
+        const urlPathArray = window.location.pathname.split("/");
+        const categorySlug = urlPathArray[urlPathArray.length-1];
+        let categoryParent;
+        if(urlPathArray.length >= 4) categoryParent = urlPathArray[urlPathArray.length-2];
+        axios.post(`${settings.API_URL}/category/get-category-by-slug`, { slug: categorySlug, parent: categoryParent })
+            .then(res => {
+                if(res.data.result[0]) {
+                    /* Category page => Get products of current category */
+                    setCurrentCategory(res.data.result[0]?.name);
+                    getProductsByCategory(res.data.result[0]?.id)
+                        .then(res => {
+                            if(res?.data?.result) {
+                                setProducts(res.data.result);
+                            }
+                        });
+                }
+                else {
+                    /* Shop page => Get all products */
+                    getAllProducts()
+                        .then(res => {
+                            if(res?.data?.result) {
+                                setProducts(res.data.result);
+                            }
+                        });
+                }
+            });
+    }, []);
+
+    const addProductToCart = (e, id, title, amount, img, price) => {
         e.preventDefault();
+        addToCart(id, title, amount, img, price);
         modalWrapper.current.style.zIndex = "10000";
         modalWrapper.current.style.opacity = "1";
     }
@@ -85,21 +71,21 @@ const ShopMain = () => {
 
             <main className="shop__products">
                 <h2 className="shop__products__header">
-                    Witraże
+                    {currentCategory}
                 </h2>
                 <section className="shop__products__products">
                     {products.map((item, index) => {
-                        return <a className="shop__products__singleProduct" key={index} href={`/produkt/${item.permalink}`}>
+                        return <a className="shop__products__singleProduct" key={index} href={`/produkt/${convertToURL(item.name)}`}>
                             <figure className="shop__products__singleProduct__imgWrapper">
-                                <img className="shop__products__singleProduct__img" src={item.img} alt={item.title} />
+                                <img className="shop__products__singleProduct__img" src={settings.API_URL + "/image?url=/media/" + item.image} alt={item.name} />
                             </figure>
                             <h3 className="shop__products__singleProduct__title">
-                                {item.title}
+                                {item.name}
                             </h3>
                             <h4 className="shop__products__singleProduct__price">
                                 {item.price} PLN
                             </h4>
-                            <button className="button button--addToCart" onClick={(e) => { addToCart(e) }}>
+                            <button className="button button--addToCart" onClick={(e) => { addProductToCart(e, item.id, item.name, 1, item.image, item.price) }}>
                                 Dodaj do koszyka
                             </button>
                         </a>

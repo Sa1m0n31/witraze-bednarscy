@@ -35,4 +35,8 @@ const deleteProduct = (id) => {
     return axios.post(`${API_URL}/product/delete`, { id });
 }
 
-export { getAllProducts, deleteProductById, getProductDetails, addAllergens, getNewId, getProductGallery, deleteProduct, getProductCategories };
+const getRecommendations = () => {
+    return axios.get(`${settings.API_URL}/product/get-recommendations`);
+}
+
+export { getAllProducts, deleteProductById, getProductDetails, addAllergens, getNewId, getProductGallery, deleteProduct, getProductCategories, getRecommendations };
