@@ -31,6 +31,7 @@ li, a, p, section,
 
 button, a {
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -1179,6 +1180,17 @@ html, body {
     transform: translateY(-50%);
 }
 
+.topMenuShopMobile {
+    width: var(--siteWidth);
+    margin: 20px auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topMenuShopMobile .topMenu__mobile {
+    width: 100%;
+}
+
 /* Shop */
 .shop {
     width: var(--siteWidth);
@@ -1850,4 +1862,32 @@ html, body {
     width: 400px;
     height: 60px;
     margin: 20px auto;
+}
+
+/* Admin */
+.loginPage .label {
+    color: #fff;
+}
+
+.input--adminLogin {
+    height: 40px;
+}
+
+.button--loginForm {
+    font-family: 'Open sans', sans-serif;
+    font-weight: 400;
+}
+
+.button--loginForm:hover {
+    letter-spacing: 0 !important;
+}
+
+/* Pages */
+article.pageContent__article * {
+    color: #fff !important;
+    background: transparent !important;
+}
+
+.d-900 {
+    display: none;
 }

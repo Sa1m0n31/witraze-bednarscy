@@ -64,7 +64,6 @@ const HeroCarousel = () => {
     }
 
     const firstImageLoad = () => {
-        /* tmp */
         setTimeout(() => {
             heroCarousel.current.style.display = "block";
             heroLoader.current.style.opacity = "0";

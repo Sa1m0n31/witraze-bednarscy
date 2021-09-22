@@ -1,32 +1,12 @@
 import React from 'react'
 import PageHeader from "./PageHeader";
 
-const ArticleMain = ({title}) => {
+const ArticleMain = ({title, content}) => {
     return <main className="pageContent">
         <PageHeader title={title} />
 
-        <article className="pageContent__article">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus sed orci maximus consectetur eu id purus. Nunc mollis magna nec aliquet condimentum. Mauris interdum nisi sed nisi porttitor convallis. Donec ut tincidunt urna, non fermentum quam. Fusce eget risus enim. Duis hendrerit lobortis facilisis. Curabitur at ex at velit sagittis lobortis rhoncus ut tortor. Nunc sit amet semper enim, sit amet venenatis nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla blandit cursus lobortis. Suspendisse justo ipsum, accumsan id suscipit vitae, bibendum consequat sem. Nullam tincidunt, est ac ornare ullamcorper, est tortor ornare risus, sit amet elementum felis sapien ut urna. Aenean malesuada tincidunt egestas. Sed pharetra egestas pellentesque. Nunc vitae eros fermentum purus consectetur interdum vitae a augue. Curabitur sit amet consequat risus.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus sed orci maximus consectetur eu id purus. Nunc mollis magna nec aliquet condimentum. Mauris interdum nisi sed nisi porttitor convallis. Donec ut tincidunt urna, non fermentum quam. Fusce eget risus enim. Duis hendrerit lobortis facilisis. Curabitur at ex at velit sagittis lobortis rhoncus ut tortor. Nunc sit amet semper enim, sit amet venenatis nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla blandit cursus lobortis. Suspendisse justo ipsum, accumsan id suscipit vitae, bibendum consequat sem. Nullam tincidunt, est ac ornare ullamcorper, est tortor ornare risus, sit amet elementum felis sapien ut urna. Aenean malesuada tincidunt egestas. Sed pharetra egestas pellentesque. Nunc vitae eros fermentum purus consectetur interdum vitae a augue. Curabitur sit amet consequat risus.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus sed orci maximus consectetur eu id purus. Nunc mollis magna nec aliquet condimentum. Mauris interdum nisi sed nisi porttitor convallis. Donec ut tincidunt urna, non fermentum quam. Fusce eget risus enim. Duis hendrerit lobortis facilisis. Curabitur at ex at velit sagittis lobortis rhoncus ut tortor. Nunc sit amet semper enim, sit amet venenatis nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla blandit cursus lobortis. Suspendisse justo ipsum, accumsan id suscipit vitae, bibendum consequat sem. Nullam tincidunt, est ac ornare ullamcorper, est tortor ornare risus, sit amet elementum felis sapien ut urna. Aenean malesuada tincidunt egestas. Sed pharetra egestas pellentesque. Nunc vitae eros fermentum purus consectetur interdum vitae a augue. Curabitur sit amet consequat risus.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus sed orci maximus consectetur eu id purus. Nunc mollis magna nec aliquet condimentum. Mauris interdum nisi sed nisi porttitor convallis. Donec ut tincidunt urna, non fermentum quam. Fusce eget risus enim. Duis hendrerit lobortis facilisis. Curabitur at ex at velit sagittis lobortis rhoncus ut tortor. Nunc sit amet semper enim, sit amet venenatis nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla blandit cursus lobortis. Suspendisse justo ipsum, accumsan id suscipit vitae, bibendum consequat sem. Nullam tincidunt, est ac ornare ullamcorper, est tortor ornare risus, sit amet elementum felis sapien ut urna. Aenean malesuada tincidunt egestas. Sed pharetra egestas pellentesque. Nunc vitae eros fermentum purus consectetur interdum vitae a augue. Curabitur sit amet consequat risus.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus sed orci maximus consectetur eu id purus. Nunc mollis magna nec aliquet condimentum. Mauris interdum nisi sed nisi porttitor convallis. Donec ut tincidunt urna, non fermentum quam. Fusce eget risus enim. Duis hendrerit lobortis facilisis. Curabitur at ex at velit sagittis lobortis rhoncus ut tortor. Nunc sit amet semper enim, sit amet venenatis nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla blandit cursus lobortis. Suspendisse justo ipsum, accumsan id suscipit vitae, bibendum consequat sem. Nullam tincidunt, est ac ornare ullamcorper, est tortor ornare risus, sit amet elementum felis sapien ut urna. Aenean malesuada tincidunt egestas. Sed pharetra egestas pellentesque. Nunc vitae eros fermentum purus consectetur interdum vitae a augue. Curabitur sit amet consequat risus.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus sed orci maximus consectetur eu id purus. Nunc mollis magna nec aliquet condimentum. Mauris interdum nisi sed nisi porttitor convallis. Donec ut tincidunt urna, non fermentum quam. Fusce eget risus enim. Duis hendrerit lobortis facilisis. Curabitur at ex at velit sagittis lobortis rhoncus ut tortor. Nunc sit amet semper enim, sit amet venenatis nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla blandit cursus lobortis. Suspendisse justo ipsum, accumsan id suscipit vitae, bibendum consequat sem. Nullam tincidunt, est ac ornare ullamcorper, est tortor ornare risus, sit amet elementum felis sapien ut urna. Aenean malesuada tincidunt egestas. Sed pharetra egestas pellentesque. Nunc vitae eros fermentum purus consectetur interdum vitae a augue. Curabitur sit amet consequat risus.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a risus sed orci maximus consectetur eu id purus. Nunc mollis magna nec aliquet condimentum. Mauris interdum nisi sed nisi porttitor convallis. Donec ut tincidunt urna, non fermentum quam. Fusce eget risus enim. Duis hendrerit lobortis facilisis. Curabitur at ex at velit sagittis lobortis rhoncus ut tortor. Nunc sit amet semper enim, sit amet venenatis nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla blandit cursus lobortis. Suspendisse justo ipsum, accumsan id suscipit vitae, bibendum consequat sem. Nullam tincidunt, est ac ornare ullamcorper, est tortor ornare risus, sit amet elementum felis sapien ut urna. Aenean malesuada tincidunt egestas. Sed pharetra egestas pellentesque. Nunc vitae eros fermentum purus consectetur interdum vitae a augue. Curabitur sit amet consequat risus.
-            </p>
+        <article className="pageContent__article" dangerouslySetInnerHTML={{__html: content}}>
+
         </article>
     </main>
 }

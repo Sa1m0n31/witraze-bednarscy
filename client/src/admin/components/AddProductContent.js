@@ -268,7 +268,7 @@ const AddProductContent = () => {
         </header>
         {addMsg === "" ? <form className="addProduct__form addProduct__form--addProduct"
                                encType="multipart/form-data"
-                               action={update ? "http://localhost:5000/product/update-product" : "http://localhost:5000/product/add-product"}
+                               action={update ? "https://bednarscy.skylo-test3.pl/product/update-product" : "https://bednarscy.skylo-test3.pl/product/add-product"}
                                method="POST"
         >
             <section className="addProduct__form__section">

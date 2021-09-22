@@ -1332,3 +1332,7 @@ select {
 .orderDetails .button--link:hover {
     color: #fff !important;
 }
+
+.addShipping__input {
+    margin: 0 auto 30px;
+}

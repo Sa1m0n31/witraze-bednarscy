@@ -1,59 +1,16 @@
-import React, { useRef } from 'react'
+import React, {useContext, useRef} from 'react'
+import shopIcon from "../../static/img/shopping-cart.svg";
+import {CartContext} from "../../App";
+import cartIcon from "../../static/img/shopping-cart.svg";
+import menuIcon from "../../static/img/menu-icon.svg";
+import closeIcon from "../../static/img/close.svg";
 
-import arrowDown from '../static/img/arrow-down.svg'
-import menuIcon from '../static/img/menu-icon.svg'
-import cartIcon from '../static/img/shopping-cart.svg'
-import closeIcon from '../static/img/close.svg'
+const TopMenuShopMobile = () => {
+    const { cartContent } = useContext(CartContext);
 
-const TopMenu = () => {
     const mobileMenu = useRef(null);
     const mobileMenuList = useRef(null);
     const mobileMenuClose = useRef(null);
-
-    const menuItems = [
-        {
-            name: "Strona główna",
-            permalink: "/"
-        },
-        {
-            name: "Witraże",
-            permalink: "/witraze",
-            submenu: [
-                {
-                    name: "Witraże sakralne",
-                    permalink: "/witraze/witraze-sakralne"
-                },
-                {
-                    name: "Witraże kameralne",
-                    permalink: "/witraze/witraze-kameralne"
-                }
-            ]
-        },
-        {
-            name: "Technologie",
-            permalink: "/technologie"
-        },
-        {
-            name: "Referencje",
-            permalink: "/referencje"
-        },
-        {
-            name: "Galeria sztuki",
-            permalink: "/galeria-sztuki"
-        },
-        {
-            name: "Konserwacja",
-            permalink: "/konserwacja"
-        },
-        {
-            name: "O nas",
-            permalink: "/o-nas"
-        },
-        {
-            name: "Kontakt",
-            permalink: "/kontakt"
-        },
-    ]
 
     const showMenu = () => {
         mobileMenu.current.style.transform = "none";
@@ -71,12 +28,12 @@ const TopMenu = () => {
         }, 350);
     }
 
-    return <menu className="topMenu">
+    return <section className="topMenuShopMobile d-900 d-900-flex">
         {/* MENU MOBILE */}
         <section className="topMenu__mobile d-900 d-900-flex">
-            <a className="topMenu__mobile__item" href="/sklep">
+            <a className="topMenu__mobile__item" href="/koszyk">
                 <img className="topMenu__mobile__icon" src={cartIcon} alt="koszyk" />
-                Sklep online
+                Twój koszyk ({cartContent.length})
             </a>
 
             <button className="topMenu__mobile__item" onClick={() => { showMenu(); }}>
@@ -128,26 +85,7 @@ const TopMenu = () => {
                 </li>
             </ul>
         </menu>
-
-        {/* MENU DESKTOP */}
-        <ul className="topMenu__list d-desktop">
-            {menuItems.map((item) => {
-                return <li className="topMenu__item">
-                    <a className="topMenu__link" href={item.permalink}>
-                        {item.name}
-                        {item.submenu ? <img className="dropdownMenuIcon" src={arrowDown} alt="rozwin" /> : "" }
-                        {item.submenu ? <ul className="topMenu__submenu">{item?.submenu?.map((itemChild) => {
-                            return <li className="topMenu__submenu__item">
-                                    <a className="topMenu__submenu__link" href={itemChild.permalink}>
-                                        {itemChild.name}
-                                    </a>
-                                </li>
-                        })}</ul> : ""}
-                    </a>
-                </li>
-            })}
-        </ul>
-    </menu>
+    </section>
 }
 
-export default TopMenu;
+export default TopMenuShopMobile;

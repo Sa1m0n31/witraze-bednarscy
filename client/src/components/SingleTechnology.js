@@ -15,7 +15,7 @@ const SingleTechnology = ({number, name, desc, extraClass, link}) => {
 
         <Button
             text="Więcej informacji"
-            link="#"
+            link={link}
             extraClass="button--technology" />
     </section>
 }

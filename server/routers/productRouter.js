@@ -98,12 +98,12 @@ con.connect(err => {
                                        const values = [mainImageId, productId];
                                        const query = 'UPDATE products SET main_image = ? WHERE id = ?';
                                        con.query(query, values, (err, res) => {
-                                          if(res) response.redirect("http://localhost:3000/panel/dodaj-produkt?add=1");
-                                          else response.redirect("http://localhost:3000/panel/dodaj-produkt?add=0");
+                                          if(res) response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=1");
+                                          else response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=0");
                                        });
                                     }
                                     else {
-                                       response.redirect("http://localhost:3000/panel/dodaj-produkt?add=0");
+                                       response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=0");
                                     }
                                  }
                               })
@@ -128,12 +128,12 @@ con.connect(err => {
                                  const values = [mainImageId, productId];
                                  const query = 'UPDATE products SET main_image = ? WHERE id = ?';
                                  con.query(query, values, (err, res) => {
-                                    if(res) response.redirect("http://localhost:3000/panel/dodaj-produkt?add=1");
-                                    else response.redirect("http://localhost:3000/panel/dodaj-produkt?add=0");
+                                    if(res) response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=1");
+                                    else response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=0");
                                  });
                               }
                               else {
-                                 response.redirect("http://localhost:3000/panel/dodaj-produkt?add=0");
+                                 response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=0");
                               }
                            }
                         })
@@ -142,7 +142,7 @@ con.connect(err => {
                });
             }
             else {
-               response.redirect("http://localhost:3000/panel/dodaj-produkt?add=0");
+               response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=0");
             }
          });
       });
@@ -216,17 +216,16 @@ con.connect(err => {
                                     if(index === array.length-1) {
                                        /* 4 - MODIFY MAIN_IMAGE COLUMN IN PRODUCTS TABLE */
                                        if(res) {
-                                          console.log("I'm ready to modify mainImageId");
                                           const mainImageId = res.insertId;
                                           const values = [mainImageId, id];
                                           const query = 'UPDATE products SET main_image = ? WHERE id = ?';
                                           con.query(query, values, (err, res) => {
-                                             if(res) response.redirect("http://localhost:3000/panel/dodaj-produkt?add=1");
-                                             else response.redirect("http://localhost:3000/panel/dodaj-produkt?add=0");
+                                             if(res) response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=1");
+                                             else response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=0");
                                           });
                                        }
                                        else {
-                                          response.redirect("http://localhost:3000/panel/dodaj-produkt?add=0");
+                                          response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=0");
                                        }
                                     }
                                  })
@@ -237,8 +236,8 @@ con.connect(err => {
                               const values = [mainImageId, id];
                               const query = 'UPDATE products SET main_image = ? WHERE id = ?';
                               con.query(query, values, (err, res) => {
-                                 if(res) response.redirect("http://localhost:3000/panel/dodaj-produkt?add=1");
-                                 else response.redirect("http://localhost:3000/panel/dodaj-produkt?add=0");
+                                 if(res) response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=1");
+                                 else response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=0");
                               });
                            }
                         }
@@ -247,8 +246,6 @@ con.connect(err => {
                         /* THERE IS NO ANY CATEGORY */
                         /* 3rd - ADD IMAGES TO IMAGES TABLE */
                         if(filenames.length) {
-                           console.log("no category, yes images");
-                           console.log(id);
                            con.query('DELETE FROM images WHERE product_id = ?', [id]);
 
                            filenames.forEach((item, index, array) => {
@@ -263,12 +260,12 @@ con.connect(err => {
                                        const values = [mainImageId, id];
                                        const query = 'UPDATE products SET main_image = ? WHERE id = ?';
                                        con.query(query, values, (err, res) => {
-                                          if(res) response.redirect("http://localhost:3000/panel/dodaj-produkt?add=1");
-                                          else response.redirect("http://localhost:3000/panel/dodaj-produkt?add=0");
+                                          if(res) response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=1");
+                                          else response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=0");
                                        });
                                     }
                                     else {
-                                       response.redirect("http://localhost:3000/panel/dodaj-produkt?add=0");
+                                       response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=0");
                                     }
                                  }
                               })
@@ -279,8 +276,8 @@ con.connect(err => {
                            const values = [mainImageId, id];
                            const query = 'UPDATE products SET main_image = ? WHERE id = ?';
                            con.query(query, values, (err, res) => {
-                              if(res) response.redirect("http://localhost:3000/panel/dodaj-produkt?add=1");
-                              else response.redirect("http://localhost:3000/panel/dodaj-produkt?add=0");
+                              if(res) response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=1");
+                              else response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=0");
                            });
                         }
                      }
@@ -288,7 +285,7 @@ con.connect(err => {
                });
             }
             else {
-               response.redirect("http://localhost:3000/panel/dodaj-produkt?add=0");
+               response.redirect("https://bednarscy.skylo-test3.pl/panel/dodaj-produkt?add=0");
             }
          });
       });

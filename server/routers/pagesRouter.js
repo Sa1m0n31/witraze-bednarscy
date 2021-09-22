@@ -5,14 +5,14 @@ const con = require("../databaseConnection");
 con.connect((err) => {
     /* Edit pages */
     router.post("/update", (request, response) => {
-       const { termsOfService, privacyPolicy, complaints, returns, shippingAndPayment, aboutUs } = request.body;
+       const { termsOfService, privacyPolicy, termsOfServiceEn, privacyPolicyEn } = request.body;
 
-       const values = [termsOfService, privacyPolicy, complaints, returns, shippingAndPayment, aboutUs];
-       const query = 'UPDATE pages SET terms_of_service = ?, privacy_policy = ?, complaints = ?, returns = ?, shipping_and_payment = ?, about_us = ? WHERE id = 1';
+       const values = [termsOfService, privacyPolicy, termsOfServiceEn, privacyPolicyEn];
+       const query = 'UPDATE pages SET terms_of_service = ?, privacy_policy = ?, terms_of_service_en = ?, privacy_policy_en = ? WHERE id = 1';
 
        con.query(query, values, (err, res) => {
-              if(res) response.redirect("http://localhost:3000/panel/pozostale?add=1");
-              else response.redirect("http://localhost:3000/panel/pozostale?add=0");
+              if(res) response.redirect("https://bednarscy.skylo-test3.pl/panel/pozostale?add=1");
+              else response.redirect("https://bednarscy.skylo-test3.pl/panel/pozostale?add=0");
        });
 
     });

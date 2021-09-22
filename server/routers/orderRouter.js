@@ -34,7 +34,7 @@ const sendStatus3Email = (id, email, fullName, letterNumber, response = null) =>
 </head>
 <body>
 <main style="width: 100%;">
-    <img style="max-width: 100%; width: 800px; margin: 0;" src="http://localhost:3000/image?url=/media/notification/logo.jpg" alt="zamowienie-zostalo-zrealizowane" />
+    <img style="max-width: 100%; width: 800px; margin: 0;" src="https://bednarscy.skylo-test3.pl/image?url=/media/notification/logo.jpg" alt="zamowienie-zostalo-zrealizowane" />
     <table style="display: block; padding: 20px; max-width: 100%; width: 800px; background: #59545A; margin-top: -5px; color: #fff; font-weight: 300; font-family: 'Open Sans', sans-serif;">
         <thead>
             <tr>
@@ -142,7 +142,7 @@ const sendStatus2Email = (id, email, fullName, response = null) => {
 </head>
 <body>
 <main style="width: 100%;">
-    <img style="max-width: 100%; width: 800px; margin: 0;" src="http://localhost:3000/image?url=/media/notification/logo.jpg" alt="zamowienie-zostalo-zrealizowane" />
+    <img style="max-width: 100%; width: 800px; margin: 0;" src="https://bednarscy.skylo-test3.pl/image?url=/media/notification/logo.jpg" alt="zamowienie-zostalo-zrealizowane" />
     <table style="display: block; padding: 20px; max-width: 100%; width: 800px; background: #59545A; margin-top: -5px; color: #fff; font-weight: 300; font-family: 'Open Sans', sans-serif;">
         <thead>
             <tr>

@@ -33,6 +33,9 @@ app.get("/kategoria/*", (req, res) => {
 app.get("/sklep", (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
+app.get("/sklep/*", (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 app.get("/regulamin", (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
@@ -79,6 +82,36 @@ app.get("/reklamacje", (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 app.get("/zwroty", (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+app.get("/podsumowanie-zamowienia", (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
+
+/* Pages */
+app.get("/witraze", (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+app.get("/witraze/*", (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+app.get("/technologie", (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+app.get("/referencje", (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+app.get("/galeria-sztuki", (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+app.get("/konserwacja", (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+app.get("/o-nas", (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+app.get("/kontakt", (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
