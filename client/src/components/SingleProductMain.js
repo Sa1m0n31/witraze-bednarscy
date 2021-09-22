@@ -2,15 +2,7 @@ import React, {useState, useEffect, useRef, useContext} from 'react'
 import ShopCategories from "./ShopCategories";
 
 import img from '../static/img/witraz2.png'
-
-import {
-    Magnifier,
-    GlassMagnifier,
-    SideBySideMagnifier,
-    PictureInPictureMagnifier,
-    MOUSE_ACTIVATION,
-    TOUCH_ACTIVATION
-} from "react-image-magnifiers";
+import Magnifier from "react-magnifier";
 import AddToCartModal from "./AddToCartModal";
 import {getRecommendations} from "../admin/helpers/productFunctions";
 import convertToURL, {convertToString} from "../helpers/convertToURL";
@@ -79,11 +71,22 @@ const SingleProductMain = () => {
 
             <main className="single__product__main">
                 <figure className="single__product__main__imgWrapper">
-                    <GlassMagnifier
-                        imageSrc={`${settings.API_URL}/image?url=/media/${product.file_path}`}
-                        largeImageSrc={`${settings.API_URL}/image?url=/media/${product.file_path}`}
-                        imageAlt={product.name}
-                    />
+                    {/*<GlassMagnifier*/}
+                    {/*    imageSrc={`${settings.API_URL}/image?url=/media/${product.file_path}`}*/}
+                    {/*    largeImageSrc={`${settings.API_URL}/image?url=/media/${product.file_path}`}*/}
+                    {/*    imageAlt={product.name}*/}
+                    {/*/>*/}
+
+                    <Magnifier src={`${settings.API_URL}/image?url=/media/${product.file_path}`} width={500} />
+
+                    {/*<Magnifier*/}
+                    {/*    imageSrc="./image.jpg"*/}
+                    {/*    imageAlt="Example"*/}
+                    {/*    largeImageSrc="./large-image.jpg" // Optional*/}
+                    {/*    mouseActivation={MOUSE_ACTIVATION.DOUBLE_CLICK} // Optional*/}
+                    {/*    touchActivation={TOUCH_ACTIVATION.DOUBLE_TAP} // Optional*/}
+                    {/*/>*/}
+
                 </figure>
 
                 <section className="single__product__main__content">

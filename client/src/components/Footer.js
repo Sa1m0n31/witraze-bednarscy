@@ -67,18 +67,23 @@ const Footer = () => {
             </h4>
             <ul className="footer__list">
                 <li className="footer__list__item">
-                    <a className="footer__list__item__link" href="/sklep">
-                        Sklep internetowy
-                    </a>
-                </li>
-                <li className="footer__list__item">
-                    <a className="footer__list__item__link" href="/sklep">
-                        Witraże sakralne
-                    </a>
-                </li>
-                <li className="footer__list__item">
-                    <a className="footer__list__item__link" href="/sklep">
+                    <a className="footer__list__item__link" href="/sklep/witraze-kameralne">
                         Witraże kameralne
+                    </a>
+                </li>
+                <li className="footer__list__item">
+                    <a className="footer__list__item__link" href="/sklep/anioly">
+                        Anioły
+                    </a>
+                </li>
+                <li className="footer__list__item">
+                    <a className="footer__list__item__link" href="/sklep/zegary">
+                        Zegary
+                    </a>
+                </li>
+                <li className="footer__list__item">
+                    <a className="footer__list__item__link" href="/sklep/lampy">
+                        Lampy
                     </a>
                 </li>
             </ul>

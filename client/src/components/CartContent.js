@@ -23,6 +23,12 @@ const CartContent = () => {
         let sum = 0;
         currentCart.forEach((item, index, array) => {
             sum += item.price * item.amount;
+
+            /* Add price for dedication */
+            if(item.dedication) {
+                sum += 50;
+            }
+
             if(index === array.length-1) setSum(sum);
         });
     }
@@ -45,7 +51,7 @@ const CartContent = () => {
                 dedication={item.dedication}
                 remove={remove}
                 setRemove={setRemove}
-                id={1} />
+                id={item.id} />
         }) : <main className="emptyCart">
             <h2 className="emptyCart__header">
                 Twój koszyk jest pusty

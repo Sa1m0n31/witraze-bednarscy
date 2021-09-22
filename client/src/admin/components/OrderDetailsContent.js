@@ -169,10 +169,7 @@ const OrderDetailsContent = () => {
                                 <span>Ilość: {item.quantity}</span>
                             </section>
                             <section className="panelContent__cart__column">
-                                <span>{item.option}</span>
-                            </section>
-                            <section className="panelContent__cart__column">
-                                <span>{item.size ? `Rozmiar: ${item.size}` : ""}</span>
+                                <span>Dedykacja: {item.dedication ? item.dedication : "BRAK"}</span>
                             </section>
                         </section>
                     })}
@@ -223,33 +220,22 @@ const OrderDetailsContent = () => {
                         Sposób dostawy: <b>{cart[0].shipping}</b>
                     </h2>
                     <h2 className="panelContent__header--smaller mt-4">
+                        Adres dostawy: <b>{cart[0].street} {cart[0].building} {cart[0].flat ? `/${cart[0].flat}` : ""}</b><br/>
+                        <b>{cart[0].postal_code} {cart[0].city}</b>
+                    </h2>
+                    <h2 className="panelContent__header--smaller mt-4">
                         Płatność: <b>{cart[0].payment}</b>
                     </h2>
-
-                    {cart[0].shipping === "Paczkomaty InPost" ? <section className="inPost__address">
-                        <h4 className="inPost__address__header">
-                            Adres paczkomatu:
-                        </h4>
-                        {cart[0].inpost_address}<br/>
-                        {cart[0].inpost_postal_code} {cart[0].inpost_city}
-                    </section> : ""}
 
                     {cart[0].company_name ? <address className="inPost__address">
                         <h4 className="inPost__address__header">
                             Dane do faktury
                         </h4>
-                        {cart[0].company_name}<br/>
-                        {cart[0].nip}
+                        Nazwa firmy: {cart[0].company_name}<br/>
+                        NIP: {cart[0].nip}
                     </address> : "" }
 
-                    <h2 className="panelContent__header--smaller mt-3">
-                        Numer listu przewozowego:
-                        <input className="panelContent__input panelContent__input--letterNumber"
-                               value={letterNumber}
-                               onChange={(e) => { setLetterNumber(e.target.value); }} />
-                    </h2>
-
-                    <h2 className="panelContent__header--smaller mt-3">
+                    <h2 className="panelContent__header--smaller mt-4">
                         Status zamówienia:
                         <select className="panelContent__select"
                                 onChange={e => { setOrderStatus(e.target.value); }}
@@ -261,8 +247,8 @@ const OrderDetailsContent = () => {
                     </h2>
 
                     {orderUpdated === -1 ? <button className="panelContent__editOrderBtn" onClick={() => { changeOrderStatus(); }}>
-                        Zmień parametry zamówienia
-                    </button> : orderUpdated === 1 ? <h4 className="infoHeader">Dane zamówienia zostały zaktualizowane</h4> : <h4 className="infoHeader">Coś poszło nie tak... Prosimy spróbować później</h4> }
+                        Zmień status zamówienia
+                    </button> : orderUpdated === 1 ? <h4 className="infoHeader mt-4">Status zamówienia został zaktualizowany</h4> : <h4 className="infoHeader mt-4">Coś poszło nie tak... Prosimy spróbować później</h4> }
                 </section> : ""}
             </section>
 

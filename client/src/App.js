@@ -40,6 +40,8 @@ import AddStockPage from "./admin/pages/AddStockPage";
 import AddProductPage from "./admin/pages/AddProductPage";
 import AddPostPage from "./admin/pages/AddPostPage";
 import { v4 as uuidv4 } from 'uuid';
+import TyPage from "./admin/pages/TyPage";
+import OrderDetails from "./admin/pages/OrderDetails";
 
 /* Context */
 const CartContext = React.createContext(null);
@@ -240,6 +242,9 @@ function App() {
     <Route path="/podsumowanie-zamowienia">
         <ShippingAndPayment />
     </Route>
+    <Route path="/dziekujemy">
+        <TyPage />
+    </Route>
 
     {/* Admin panel */}
       <Route exact path='/admin'>
@@ -283,6 +288,9 @@ function App() {
       </Route>
       <Route path="/panel/dodaj-stan-magazynowy">
           <AddStockPage />
+      </Route>
+      <Route path="/panel/szczegoly-zamowienia">
+          <OrderDetails />
       </Route>
 
       {/* Add content pages */}

@@ -54,7 +54,7 @@ const CartItem = ({id, uuid, amount, remove, setRemove, dedication}) => {
             </section>
 
             <section className="cart__item__prop">
-                <span className='cart__item__key'>Dedykacja</span>
+                <span className='cart__item__key'>Dedykacja (+50 PLN)</span>
                 <span className='cart__item__value'>{dedication ? dedication : "BRAK"}</span>
             </section>
         </section>

@@ -7,7 +7,9 @@ const TopBarShop = () => {
 
     return <header className="topBarShop">
         <h1 className="topBarShop__header">
-            Sklep internetowy
+            <a href="/sklep">
+                Sklep internetowy
+            </a>
         </h1>
 
         <a className="topBar__shop d-desktop topBarShop__cart" href="/koszyk">

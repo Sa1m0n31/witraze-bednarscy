@@ -681,6 +681,15 @@
     .addToCartModal__cartIcon {
         width: 120px;
     }
+
+    .ty__header, .ty__subheader {
+        font-size: 21px;
+    }
+
+    .button--ty {
+        width: 100%;
+        max-width: 400px;
+    }
 }
 
 @media(max-width: 576px) {

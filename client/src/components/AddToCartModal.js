@@ -1,5 +1,5 @@
 import React from 'react'
-import cartIcon from '../static/img/modal-cart.svg'
+import cartIcon from '../static/img/addToCart-icon.png'
 import closeIcon from '../static/img/close.svg'
 
 const AddToCartModal = ({hideModal}) => {

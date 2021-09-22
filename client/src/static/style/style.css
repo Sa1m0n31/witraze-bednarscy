@@ -207,6 +207,15 @@ html, body {
     align-items: center;
 }
 
+.topBar__facebookLink {
+    opacity: .85;
+    transition: .3s all ease-in-out;
+}
+
+.topBar__facebookLink:hover {
+    opacity: 1;
+}
+
 .topBar__facebookLink__img {
     margin-right: 15px;
 }
@@ -1154,6 +1163,15 @@ html, body {
     font-weight: 400;
 }
 
+.topBarShop__header a {
+    font-family: 'Cormorant', serif;
+    opacity: .9;
+}
+
+.topBarShop__header a:hover {
+    opacity: 1;
+}
+
 .topBarShop__cart {
     position: absolute;
     right: 0;
@@ -1289,7 +1307,7 @@ html, body {
 }
 
 .shop__products__singleProduct:hover .shop__products__singleProduct__img {
-    transform: scale(1.1);
+    filter: brightness(.5);
 }
 
 /* Single product */
@@ -1342,6 +1360,10 @@ html, body {
     position: relative;
 }
 
+.single__product__main__imgWrapper img {
+    /*width: 100% !important;*/
+}
+
 .single__product__main__imgOverlay {
     position: absolute;
     top: 0;
@@ -1370,7 +1392,6 @@ html, body {
 .single__product__main__imgWrapper img {
     min-width: 100%;
     min-height: 100%;
-    width: auto !important;
 }
 
 .single__product__main__content {
@@ -1558,6 +1579,46 @@ html, body {
     margin: 50px auto;
 }
 
+.error {
+    display: block;
+    color: red;
+    font-size: 13px;
+    padding-bottom: 30px;
+}
+
+.label--checkbox {
+    font-size: 13px;
+    margin-top: 50px;
+}
+
+.label--checkbox input {
+    margin-right: 10px;
+}
+
+.label--checkbox a {
+    opacity: .9;
+    font-size: 13px;
+}
+
+.label--checkbox a:hover {
+    opacity: 1;
+}
+
+.shippingAndPayment__sum {
+    font-weight: 400;
+    font-size: 26px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.shippingAndPayment__sum__price {
+    padding-left: 30px;
+    font-weight: 400;
+    color: var(--gold);
+    padding-top: 5px;
+}
+
 .shippingAndPayment__form {
     display: flex;
     justify-content: space-between;
@@ -1589,6 +1650,10 @@ html, body {
     padding: 0 15px;
     width: 100%;
     color: #fff;
+}
+
+.input--error {
+    border-color: red;
 }
 
 .input::placeholder {
@@ -1671,7 +1736,7 @@ html, body {
 }
 
 .button--shippingAndPayment {
-    margin-top: 50px;
+    margin-top: 0;
 }
 
 .button--checked {
@@ -1727,15 +1792,16 @@ html, body {
 }
 
 .addToCartModal__cartIcon {
-    width: 150px;
+    width: 200px;
     height: auto;
+    margin-top: -20px;
 }
 
 .addToCartModal__header {
     text-align: center;
     font-weight: 400;
     font-size: 17px;
-    margin: 45px 0;
+    margin: 25px 0 45px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -1763,4 +1829,25 @@ html, body {
     margin-top: 50px;
     width: 300px;
     height: 50px;
+}
+
+/* Ty page */
+.ty {
+    padding: 70px 20px;
+}
+
+.ty__header, .ty__subheader {
+    text-align: center;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.ty__subheader {
+    margin: 15px 0 40px;
+}
+
+.button--ty {
+    width: 400px;
+    height: 60px;
+    margin: 20px auto;
 }

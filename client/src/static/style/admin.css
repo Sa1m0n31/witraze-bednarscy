@@ -848,12 +848,12 @@ input[type=file] {
     margin: 30px 0;
 }
 
-.panelContent__cart__column:first-of-type {
-    flex: 2;
+.panelContent__cart__column:last-of-type {
+    flex: 4;
 }
 
 .panelContent__cart__column {
-    flex: 1;
+    flex: 3;
 }
 
 .panelContent__cart__item span {
@@ -1314,4 +1314,21 @@ select {
 
 .panel * {
     font-family: 'Open sans', sans-serif;
+}
+
+/* Update - 22.09.21 */
+.orderDetails * {
+    font-family: 'Open sans', sans-serif;
+}
+
+.mt-4 {
+    margin-top: 20px;
+}
+
+.orderDetails .button--link {
+    color: #12944B !important;
+}
+
+.orderDetails .button--link:hover {
+    color: #fff !important;
 }
