@@ -97,10 +97,10 @@ const HeroCarousel = () => {
                 <TopMenu />
 
                 <h1 className="heroCarousel__header">
-                    Witraże sakralne - piękne projekty
+                    Witraże Bednarscy
                 </h1>
                 <h2 className="heroCarousel__subheader">
-                    Tworzymy witraże różnego typu i sprzedajemy rzeczy
+                    Zapraszamy do naszej pracowni witraży oraz galerii sztuki
                 </h2>
                 <Button
                     text="Nasze realizacje"

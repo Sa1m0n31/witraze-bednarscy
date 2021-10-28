@@ -529,6 +529,7 @@ html, body {
     margin-left: clamp(50px, 20%, 340px);
     padding-top: 5vh;
     max-width: 50%;
+    padding-bottom: 5vh;
 }
 
 .aboutUs__header {
@@ -1021,7 +1022,7 @@ html, body {
 }
 
 .pageContent__artGallery__desc p {
-    margin-bottom: 25px;
+    margin-top: 15px;
 }
 
 .pageContent__artGallery__header {

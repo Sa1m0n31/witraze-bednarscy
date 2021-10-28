@@ -19,7 +19,7 @@ const Homepage = () => {
         <HeroCarousel />
         <AboutUsSection />
         <TechnologiesSection />
-        <CreationProcessSection />
+        {/*<CreationProcessSection />*/}
         <PortfolioSection />
         <ContactSection />
         <Footer />
