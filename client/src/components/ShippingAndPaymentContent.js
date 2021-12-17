@@ -178,7 +178,7 @@ const ShippingAndPaymentContent = () => {
                         else {
                             /* PAYMENT PROCESS */
                             localStorage.setItem('sec-order-complete', 'true');
-                            let paymentUri = "https://sandbox.przelewy24.pl/trnRequest/";
+                            let paymentUri = "https://secure.przelewy24.pl/trnRequest/";
 
                             axios.post(`${settings.API_URL}/payment/payment`, {
                                 sessionId,

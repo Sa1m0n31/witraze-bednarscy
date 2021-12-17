@@ -55,7 +55,7 @@ const TopBar = ({shop}) => {
                         <img ref={arrow} className="languageBtn__img" src={arrowDown} alt="wiecej" />
                     </button>
                 </label>
-                <a ref={secondLanguage} href="http://en.bednarscy.skylo-test3.pl"
+                <a ref={secondLanguage} href="http://witrazebednarscy.pl"
                     className="topBar__language__inner topBar__language__inner--second">
                     <img className="flag" src={unitedKingdom} alt="angielski" />
                     <span className="d-desktop">English</span>

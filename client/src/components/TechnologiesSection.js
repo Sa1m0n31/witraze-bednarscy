@@ -23,20 +23,20 @@ const TechnologiesSection = () => {
 
             <SingleTechnology
                 number="01"
-                name="Nazwa technologii"
-                desc="KRÓTKI OPIS, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam."
+                name="Technika Tiffany'ego"
+                desc="Większość naszych witraży tworzymy techniką Tiffany'ego"
                 extraClass="technology--1"
                 link="/technologie" />
             <SingleTechnology
                 number="02"
-                name="Kolejna technologia"
-                desc="KRÓTKI OPIS, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam."
+                name="Metoda angielska"
+                desc="W niektórych projektach stosujemy również metodę angielską"
                 extraClass="technology--2"
                 link="/technologie" />
             <SingleTechnology
                 number="03"
-                name="Następna technologia"
-                desc="KRÓTKI OPIS, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam."
+                name="Techniki mieszane"
+                desc="Wiele naszych witraży powstaje za pomocą technik mieszanych"
                 extraClass="technology--3"
                 link="/technologie" />
         </main>

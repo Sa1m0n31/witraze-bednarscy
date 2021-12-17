@@ -69,8 +69,8 @@ con.connect(err => {
                 email: request.body.email,
                 country: "PL",
                 language: "pl",
-                urlReturn: "https://bednarscy.skylo-test3.pl/dziekujemy",
-                urlStatus: "https://bednarscy.skylo-test3.pl/payment/verify",
+                urlReturn: "https://witrazebednarscy.pl/dziekujemy",
+                urlStatus: "https://witrazebednarscy.pl/payment/verify",
                 sign: gen_hash
             };
 
@@ -78,11 +78,11 @@ con.connect(err => {
             let responseToClient;
 
             /* FIRST STEP - REGISTER */
-            got.post("https://sandbox.przelewy24.pl/api/v1/transaction/register", {
+            got.post("https://secure.przelewy24.pl/api/v1/transaction/register", {
                 json: postData,
                 responseType: 'json',
                 headers: {
-                    'Authorization': 'Basic MTM4MzU0OjU0Nzg2ZGJiOWZmYTY2MzgwOGZmNGExNWRiMzI3MTNm' // tmp
+                    'Authorization': 'Basic MTU4NTI1OjI4NGE0NGQxMGIyNjNmZjM0NDhlNDRjOTU3YjdkMDhj'
                 }
             })
                 .then(res => {
@@ -127,7 +127,7 @@ con.connect(err => {
             data = hash.update(`{"sessionId":"${sessionId}","orderId":${orderId},"amount":${amount},"currency":"PLN","crc":"${crc}"}`, 'utf-8');
             gen_hash= data.digest('hex');
 
-            got.put("https://sandbox.przelewy24.pl/api/v1/transaction/verify", {
+            got.put("https://secure.przelewy24.pl/api/v1/transaction/verify", {
                 json: {
                     merchantId,
                     posId,
@@ -139,7 +139,7 @@ con.connect(err => {
                 },
                 responseType: 'json',
                 headers: {
-                    'Authorization': 'Basic MTM4MzU0OjU0Nzg2ZGJiOWZmYTY2MzgwOGZmNGExNWRiMzI3MTNm' // tmp
+                    'Authorization': 'Basic MTU4NTI1OjI4NGE0NGQxMGIyNjNmZjM0NDhlNDRjOTU3YjdkMDhj'
                 }
             })
                 .then(res => {

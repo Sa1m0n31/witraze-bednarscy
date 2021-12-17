@@ -31,7 +31,7 @@ const PanelDatesSettings = () => {
 
     useEffect(() => {
         /* Get dates excluded */
-        axios.get("https://bednarscy.skylo-test3.pl/dates/get-all")
+        axios.get("https://witrazebednarscy.pl/dates/get-all")
             .then(res => {
                 if(res.data) {
                     setHoursDatabase(res.data.result);
@@ -112,7 +112,7 @@ const PanelDatesSettings = () => {
         });
         const choosenDay = calendar[dayOfDelivery];
         if((hours)&&(choosenDay)) {
-            axios.post("https://bednarscy.skylo-test3.pl/dates/add", {
+            axios.post("https://witrazebednarscy.pl/dates/add", {
                 hours,
                 day: {
                     day: choosenDay.day,
@@ -137,7 +137,7 @@ const PanelDatesSettings = () => {
                 setAdded("");
             }, 3000);
         }
-        axios.get("https://bednarscy.skylo-test3.pl/dates/get-all")
+        axios.get("https://witrazebednarscy.pl/dates/get-all")
             .then(res => {
                 if(res.data) {
                     setHoursDatabase(res.data.result);
@@ -156,7 +156,7 @@ const PanelDatesSettings = () => {
                 setDeleted(-1);
             }, 1000);
         }
-        axios.get("https://bednarscy.skylo-test3.pl/dates/get-all")
+        axios.get("https://witrazebednarscy.pl/dates/get-all")
             .then(res => {
                 if(res.data) {
                     setHoursDatabase(res.data.result);
@@ -165,7 +165,7 @@ const PanelDatesSettings = () => {
     }, [deleted]);
 
     const deleteHourById = () => {
-        axios.post("https://bednarscy.skylo-test3.pl/dates/delete", {
+        axios.post("https://witrazebednarscy.pl/dates/delete", {
             id: candidateToDelete
         })
             .then(res => {

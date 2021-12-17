@@ -57,7 +57,7 @@ con.connect(function(err) {
                               const values = [firstName, lastName, city, street, building, flat, postalCode, phoneNumber, email];
                               const query = 'UPDATE users SET first_name = ?, last_name = ?, city = ?, street = ?, building = ?, flat = ?, postal_code = ?, phone_number = ? WHERE email = ?';
                               con.query(query, values, (err, res) => {
-                                  got.post("https://bednarscy.skylo-test3.pl/newsletter/add", {
+                                  got.post("https://witrazebednarscy.pl/newsletter/add", {
                                       json: {
                                           email: email
                                       },
@@ -94,7 +94,7 @@ con.connect(function(err) {
               const userId = res.insertId;
               /* Add user to newsletter */
               if(dupa) {
-                  got.post("https://bednarscy.skylo-test3.pl/newsletter/add", {
+                  got.post("https://witrazebednarscy.pl/newsletter/add", {
                       json: {
                           email: email
                       },

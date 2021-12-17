@@ -11,8 +11,8 @@ con.connect((err) => {
        const query = 'UPDATE pages SET terms_of_service = ?, privacy_policy = ?, terms_of_service_en = ?, privacy_policy_en = ? WHERE id = 1';
 
        con.query(query, values, (err, res) => {
-              if(res) response.redirect("https://bednarscy.skylo-test3.pl/panel/pozostale?add=1");
-              else response.redirect("https://bednarscy.skylo-test3.pl/panel/pozostale?add=0");
+              if(res) response.redirect("https://witrazebednarscy.pl/panel/pozostale?add=1");
+              else response.redirect("https://witrazebednarscy.pl/panel/pozostale?add=0");
        });
 
     });

@@ -1,9 +1,9 @@
 import logo from '../static/external/img/logo.png'
 
 const settings = {
-    API_URL: "https://bednarscy.skylo-test3.pl",
+    API_URL: "https://witrazebednarscy.pl",
     logo: logo,
-    homepage: "http://bednarscy.skylo-test3.pl"
+    homepage: "http://witrazebednarscy.pl"
 }
 
 export default settings;

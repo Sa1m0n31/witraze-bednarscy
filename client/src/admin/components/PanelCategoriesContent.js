@@ -137,7 +137,7 @@ const PanelCategoriesContent = () => {
 
                 {addedMsg === "" ? <form className="panelContent__frame__form categoriesForm"
                                          method="POST"
-                                         action={update ? "https://bednarscy.skylo-test3.pl/category/update" : "https://bednarscy.skylo-test3.pl/category/add"}
+                                         action={update ? "https://witrazebednarscy.pl/category/update" : "https://witrazebednarscy.pl/category/add"}
                                          onSubmit={(e) => { handleSubmit(e) }}
                 >
                     <input className="invisibleInput"

@@ -20,7 +20,7 @@ const Homepage = () => {
         <AboutUsSection />
         <TechnologiesSection />
         {/*<CreationProcessSection />*/}
-        <PortfolioSection />
+        {/*<PortfolioSection />*/}
         <ContactSection />
         <Footer />
     </div>

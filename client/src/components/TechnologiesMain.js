@@ -14,7 +14,7 @@ const TechnologiesMain = () => {
 
                 <article className="aboutUs__section__content" data-aos="fade-left">
                     <h3 className="aboutUs__section__header">
-                        Technologia pierwsza
+                        Technika Tiffany'ego
                     </h3>
                     <p>
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
@@ -31,7 +31,7 @@ const TechnologiesMain = () => {
         <section className="technologies__section technologies__section--revert">
                 <article data-aos="fade-right" className="aboutUs__section__content aboutUs__section__content--marginRight">
                     <h3 className="aboutUs__section__header">
-                        Technologia druga
+                        Metoda angielska
                     </h3>
                     <p>
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
@@ -53,7 +53,7 @@ const TechnologiesMain = () => {
 
                 <article data-aos="fade-left" className="aboutUs__section__content">
                     <h3 className="aboutUs__section__header">
-                        Technologia trzecia
+                        Techniki mieszane
                     </h3>
                     <p>
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est

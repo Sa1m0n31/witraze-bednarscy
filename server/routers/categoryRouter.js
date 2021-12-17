@@ -9,7 +9,7 @@ con.connect(err => {
         hidden = hidden === "hidden";
 
         if(name === "") {
-            response.redirect("https://bednarscy.skylo-test3.pl/panel/kategorie?added=0");
+            response.redirect("https://witrazebednarscy.pl/panel/kategorie?added=0");
             return 0;
         }
 
@@ -18,8 +18,8 @@ con.connect(err => {
 
         con.query(query, values, (err, res) => {
             console.log(err);
-            if(!err) response.redirect("https://bednarscy.skylo-test3.pl/panel/kategorie?added=1");
-            else response.redirect("https://bednarscy.skylo-test3.pl/panel/kategorie?added=-1")
+            if(!err) response.redirect("https://witrazebednarscy.pl/panel/kategorie?added=1");
+            else response.redirect("https://witrazebednarscy.pl/panel/kategorie?added=-1")
         });
     });
 
@@ -143,8 +143,8 @@ con.connect(err => {
     const query = 'UPDATE categories SET name = ?, name_en = ?, permalink = ?, hidden = ? WHERE id = ?';
 
     con.query(query, values, (err, res) => {
-        if(!err) response.redirect("https://bednarscy.skylo-test3.pl/panel/kategorie?added=2");
-        else response.redirect("https://bednarscy.skylo-test3.pl/panel/kategorie?added=-1")
+        if(!err) response.redirect("https://witrazebednarscy.pl/panel/kategorie?added=2");
+        else response.redirect("https://witrazebednarscy.pl/panel/kategorie?added=-1")
     });
     });
 });

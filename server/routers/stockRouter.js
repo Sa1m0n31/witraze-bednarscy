@@ -98,7 +98,7 @@ con.connect(err => {
                             const query = 'UPDATE products SET stock_id = ? WHERE id = ?';
                             con.query(query, values);
                             /* Check if need to send notification */
-                            got.post("https://bednarscy.skylo-test3.pl/notification/check-notifications", {
+                            got.post("https://witrazebednarscy.pl/notification/check-notifications", {
                                 json: { productId: item },
                                 responseType: "json"
                             });

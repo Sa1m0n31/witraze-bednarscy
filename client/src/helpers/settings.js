@@ -1,5 +1,5 @@
 const settings = {
-    API_URL: "https://bednarscy.skylo-test3.pl"
+    API_URL: "https://witrazebednarscy.pl"
 }
 
 export default settings;

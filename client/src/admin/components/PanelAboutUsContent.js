@@ -135,7 +135,7 @@ const PanelAboutUsContent = () => {
 
                 {addedMsg === "" ? <form className="panelContent__frame__form categoriesForm"
                                          method="POST"
-                                         action={update ? "https://bednarscy.skylo-test3.pl/about-us/update" : "https://bednarscy.skylo-test3.pl/about-us/add"}
+                                         action={update ? "https://witrazebednarscy.pl/about-us/update" : "https://witrazebednarscy.pl/about-us/add"}
                                          onSubmit={(e) => { handleSubmit(e) }}
                                          encType="multipart/form-data"
                 >

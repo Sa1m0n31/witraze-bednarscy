@@ -900,7 +900,7 @@ html, body {
 }
 
 .background--4 {
-    top: 3500px;
+    top: 2500px;
     right: -300px;
 }
 
@@ -1294,7 +1294,8 @@ html, body {
 .shop__products__singleProduct__img {
     min-width: 100%;
     min-height: 100%;
-    max-width: 200%;
+    max-width: 110%;
+    max-height: 110%;
     transition: .5s all ease-in-out;
 }
 
